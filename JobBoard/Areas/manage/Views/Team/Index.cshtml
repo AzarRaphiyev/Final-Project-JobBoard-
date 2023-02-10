@@ -1,0 +1,46 @@
+﻿@model List<Team>
+@{
+	ViewData["Title"] = "Index";
+	int count = 0;
+}
+
+<div class="mx-5">
+	<div class="d-flex justify-content-between align-content-center">
+
+		<h3>Team Members:</h3>
+		<a asp-action="create" asp-controller="Team" class="btn btn-primary">+Add</a>
+	</div>
+	<table class="table table-hover" style="margin-top:10px">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Fullname</th>
+				<th scope="col">Position</th>
+				<th scope="col">Order</th>
+				<th scope="col">Image</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				count++;
+				<tr>
+					<th scope="row">@count</th>
+					<td>@item.Fullname</td>
+					<td>@item?.position?.Jobname</td>
+					<td>@item.Order</td>
+					<td>
+						<img style="width:100px" src="~/uploads/team/@item.Image" />
+					</td>
+					<td>
+						<a asp-action="update" asp-controller="Team" asp-route-id="@item.Id" class="btn btn-outline-primary"> <i class="bi bi-pencil-square"></i> </a>
+						<a asp-action="delete" asp-controller="Team" asp-route-id="@item.Id" class="btn btn-outline-danger"> <i class="fas fa-trash"></i> </a>
+					</td>
+				</tr>
+			}
+
+		</tbody>
+	</table>
+</div>
+

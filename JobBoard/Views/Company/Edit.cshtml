@@ -1,0 +1,56 @@
+﻿@model JobBoard.Models.Company
+
+@{
+    ViewData["Title"] = "Edit";
+}
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('../assets/images/hero_1.jpg');" id="home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                <h1 class="text-white font-weight-bold">Edit your Company</h1>
+                        <div class="custom-breadcrumbs">
+                            <a asp-action="index" asp-controller="home">Home</a> <span class="mx-2 slash">/</span>
+                            <span class="text-white"><strong></strong>Company Edit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<h1>Edit</h1>
+
+<h4>Company</h4>
+<hr/>
+	<div class="row">
+		<div class="col-md-12">
+			<form asp-action="Edit">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+				<input type="hidden" asp-for="Id" />
+				<div class="form-group">
+					<label asp-for="Fullname" class="control-label"></label>
+					<input asp-for="Fullname" class="form-control" />
+					<span asp-validation-for="Fullname" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Location" class="control-label"></label>
+					<input asp-for="Location" class="form-control" />
+					<span asp-validation-for="Location" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="ImageFile" class="control-label"></label>
+					<input asp-for="ImageFile" class="form-control" />
+					<span asp-validation-for="ImageFile" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Save" class="btn btn-primary" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
