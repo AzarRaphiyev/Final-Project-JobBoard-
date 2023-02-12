@@ -10,9 +10,9 @@
                 <div class="row">
                     <div class="col-md-12"> 
                         <div class="custom-breadcrumbs mb-0">
-                    <span class="text-white">Posted by</span> @Model.Blog.Authour.Fullname</a>
+                    <span class="text-white">Posted by</span class="text-white"> @Model.Blog.Authour.Fullname</a>
                             <span class="mx-2 slash">&bullet;</span>
-                            <span class="text-white"><strong>@Model.Blog.Data.ToString("dd/MM/yyyy")</strong></span>
+                    <span class="text-white"><strong>@Model.Blog.Data.ToString()</strong></span>
                         </div>
                         <h1 class="text-white">@Model.Blog.Title</h1>
                     </div>
@@ -26,9 +26,11 @@
                         <h4 class="mb-4">@Model.Blog.Title</h4>
                         <p><img src="~/uploads/blog/@Model.Blog.Image" alt="Image" class="img-fluid rounded"></p>
                         <p>@Model.Blog.Description</p>
+
                         <div class="pt-5">
-                            <p>Categorie: <a href="#">@Model.Blog.Catagory.CatagoryName</a></p>
+                            <p>Categorie: <a asp-action="index" asp-controller="Catagory" asp-route-id="@Model.Blog.CatagoryId">@Model.Blog.Catagory.CatagoryName</a></p>
                         </div>
+               
                         @*Section Comment start*@
                         @*<div class="pt-5">
                             <h3 class="mb-5">6 Comments</h3>
@@ -141,6 +143,7 @@
                             <img src="~/uploads/authour/@Model.Blog.Authour.AuthourImage" alt="Image placeholder" class="img-fluid mb-4 w-50 rounded-circle">
                             <h3>About The Author</h3>
                             <p>@Model.Blog.Authour.Description</p>
+                    <p><a asp-action="details" asp-controller="Authour" asp-route-id=@Model.Blog.AuthourId class="btn btn-primary btn-sm">Read More</a></p>
                         </div>
 
                         <div class="sidebar-box">

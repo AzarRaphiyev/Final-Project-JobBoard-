@@ -46,7 +46,13 @@ namespace JobBoard.Areas.manage.Controllers
 					return View();
 				}
 				blog.Image=FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/blog", blog.ImageFile);
+				blog.Data = DateTime.Now;
 				jobBoardContext.blogs.Add(blog);
+			}
+			else
+			{
+				ModelState.AddModelError("Imagefile", "Bos olamaz");
+				return View();
 			}
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index");
@@ -88,7 +94,7 @@ namespace JobBoard.Areas.manage.Controllers
 			}
 			extblog.Title = blog.Title;
 			extblog.Description = blog.Description;
-			extblog.Data= blog.Data;
+			extblog.Data = DateTime.Now;
 			extblog.CatagoryId= blog.CatagoryId;
 			extblog.AuthourId= blog.AuthourId;
 			jobBoardContext.SaveChanges();

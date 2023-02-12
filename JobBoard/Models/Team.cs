@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public int PositionId { get; set; }
         public Position? position { get; set; }
+        [Required]
         public int Order { get; set; }
         [Required]
         [StringLength(maximumLength: 30, ErrorMessage = "It can be 30 characters")]

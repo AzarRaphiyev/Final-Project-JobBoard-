@@ -14,5 +14,7 @@
 		public DbSet<Catagory> catagories { get; set; }
 		public DbSet<Authour> authours { get; set; }
 		public DbSet<Blog> blogs { get; set; }
+
+		public DbSet<ServicesSite> services  { get; set; }
 	}
 }

@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public int CatagoryId { get; set; }
+        [Required]
         public int order { get; set; }
         public int AuthourId { get; set; }
         [Required]
@@ -15,10 +16,9 @@
 
         public string Description { get; set; }
 
-        [Required]
         [StringLength(maximumLength: 50, ErrorMessage = "Can be a maximum of 50 characters")]
         [DataType(DataType.DateTime)]
-        public DateTime Data { get; set; }
+        public DateTime? Data { get; set; }
         
         [StringLength(maximumLength: 100, ErrorMessage = "Can be a maximum of 100 characters")]
         public string? Image { get; set; }
