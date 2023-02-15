@@ -1,4 +1,6 @@
-﻿namespace JobBoard.Helpers
+﻿using System.Xml.Linq;
+
+namespace JobBoard.Helpers
 {
 	public static class FileManager
 	{
@@ -21,5 +23,6 @@
 				System.IO.File.Delete(deletepath);
 			}
 		}
+		
 	}
 }

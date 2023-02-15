@@ -7705,6 +7705,10 @@
       "PackagePath": "staticwebassets\\uploads\\MiniInfoBar\\sq_img_8.jpg"
     },
     {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\QuestionsSectionImage\\4233450-612x612-1-p6ozj9i5ekqltoixjxsglgyp9ab4xqc9x0b1cuwmfc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\QuestionsSectionImage\\4233450-612x612-1-p6ozj9i5ekqltoixjxsglgyp9ab4xqc9x0b1cuwmfc.jpg"
+    },
+    {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\authour\\Discover and Shop What's Next _ Highsnobiety.jpg",
       "PackagePath": "staticwebassets\\uploads\\authour\\Discover and Shop What's Next _ Highsnobiety.jpg"
     },
@@ -7753,6 +7757,10 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\9 Ways to Take Responsibility for Your Life - Thrive Global.jpg"
     },
     {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\blog\\Adidas.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\Adidas.png"
+    },
+    {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\blog\\Creativity_ It's not what we make, it's how we live_.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\Creativity_ It's not what we make, it's how we live_.jpg"
     },
@@ -7793,8 +7801,24 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\ul images encapsulate what freedom means to 50 photographers.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\default-profile.png",
-      "PackagePath": "staticwebassets\\uploads\\company\\default-profile.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\Adidas.png",
+      "PackagePath": "staticwebassets\\uploads\\company\\Adidas.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\indir.png",
+      "PackagePath": "staticwebassets\\uploads\\company\\indir.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\job_logo_1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\company\\job_logo_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\job_logo_3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\company\\job_logo_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\job_logo_5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\company\\job_logo_5.jpg"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\default-profile.png",

@@ -20,14 +20,26 @@
 						<a href="services.html">Pages</a>
 						<ul class="dropdown">
 							<li><a asp-action="index" asp-controller="Services">Services</a></li>
+							@if (User.Identity.IsAuthenticated)
+							{
+								if (User.IsInRole("SuperAdmin"))
+								{
+							<li><a asp-action="index" asp-controller="Contact">Contacts</a></li>
+								}
+								else
+								{
+									
+								}
+							}
+							
 							<li><a href="portfolio.html">Portfolio</a></li>
 							<li><a href="testimonials.html">Testimonials</a></li>
-							<li><a href="faq.html">Frequently Ask Questions</a></li>
+							<li><a asp-action="index" asp-controller="faq">Frequently Ask Questions</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
 						</ul>
 					</li>
 					<li><a asp-action="index" asp-controller="blog">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a asp-action="create" asp-controller="Contact">Contact</a></li>
 					<li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
 					<li class="d-lg-none"><a asp-action="login" asp-controller="account">Log In</a></li>
 				</ul>
@@ -39,13 +51,14 @@
 						if (User.IsInRole("Company"))
 						{
 							<a href="post-job.html" class="btn btn-outline-white "><span class="mr-2 icon-add"></span>Post a Job</a>
-							<a asp-action="Edit" asp-controller="Company" class="btn btn-primary "><i class="bi bi-pencil-square"></i></a>
-							<a asp-action="logout" asp-controller="account" class="btn btn-primary "><i class="bi bi-box-arrow-left"></i></a>
+							<a asp-action="Edit" asp-controller="Company" asp-route-username="@User.Identity.Name" class="btn btn-primary ">  <i class="bi bi-building-fill-gear"></i> </a>
+							<a asp-action="delete" asp-controller="Company" asp-route-username="@User.Identity.Name" class="btn btn-primary "> <i class="bi bi-building-fill-dash"></i></a>
+							<a asp-action="logout" asp-controller="account" class="btn btn-primary "> <i class="bi bi-box-arrow-left"></i> </a>
 						}
 						if (User.IsInRole("SuperAdmin")||User.IsInRole("Admin"))
 						{
 							<a asp-action="index" asp-controller="dashboard" asp-area="manage" class="btn btn-outline-primary ">Go Admin Panel</a>
-							<a asp-action="logout" asp-controller="account" class="btn btn-primary "><i class="bi bi-box-arrow-left"></i></a>
+							<a asp-action="logout" asp-controller="account" class="btn btn-primary" ><i class="bi bi-box-arrow-left"></i></a>
 						}
 						if (User.IsInRole("Member"))
 						{

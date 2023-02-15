@@ -1,6 +1,7 @@
 ﻿
 
 using JobBoard.Helpers;
+using JobBoard.Models;
 using System.Diagnostics.Metrics;
 
 namespace JobBoard.Controllers
@@ -76,6 +77,7 @@ namespace JobBoard.Controllers
 				ModelState.AddModelError("Email", "Email is token");
 				return View();
 			}
+
 			Member JobSeeker = new Member
 			{
 				Fullname = $"{memberRegisterVM.Name} {memberRegisterVM.Surname}",
@@ -130,14 +132,39 @@ namespace JobBoard.Controllers
             {
                 ModelState.AddModelError("Email", "Email is token");
                 return View();
+			}
+            if (companyVM.ImageFile != null)
+			{
+				if (companyVM.ImageFile.ContentType != "image/png" && companyVM.ImageFile.ContentType != "image/jpeg")
+				{
+                    ModelState.AddModelError("ImageFile", "But Png, Jpeg and Jpg can be downloaded");
+                    return View();
+                }
+                if (companyVM.ImageFile.Length > 3145728)
+				{
+                    ModelState.AddModelError("ImageFile", "It cannot be more than 3 MB");
+                    return View();
+                }
+                companyVM.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/company", companyVM.ImageFile);
+			}
+			else
+			{
+                ModelState.AddModelError("Imagefile", "Bos olamaz");
+                return View();
             }
-			Company company = new Company
+            Company company = new Company
 			{
 				Email = companyVM.CompanyEmail,
 				Fullname = companyVM.CompanyName,
 				UserName = companyVM.CompanyUserName,
 				Location = companyVM.CompanyLocation,
-				Image = "default-profile.png"
+				Description=companyVM.Description,
+				Slogan= companyVM.Slogan,
+				InstagramUrl= companyVM.InstagramUrl,
+				FecebookUrl= companyVM.FecebookUrl,
+				TwitterUrl= companyVM.TwitterUrl,
+				LinkedinUrl= companyVM.LinkedinUrl,
+				Image = companyVM.Image
 			};
 			jobBoardContext.Add(company);
             AppUser member = new AppUser
@@ -145,6 +172,7 @@ namespace JobBoard.Controllers
                 FullName = companyVM.CompanyName,
                 Email = companyVM.CompanyEmail,
                 UserName = companyVM.CompanyUserName,
+				Image=companyVM.Image,
                 Role = "Company"
             };
             var result = await userManager.CreateAsync(member, companyVM.Password);

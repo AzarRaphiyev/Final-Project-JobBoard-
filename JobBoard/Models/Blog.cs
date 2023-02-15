@@ -27,5 +27,6 @@
         public IFormFile? ImageFile { get; set; }
         public Catagory? Catagory { get; set; }
         public Authour? Authour { get; set; }
+        public List<CommentBlog>? commentBlogs { get; set;}
     }
 }

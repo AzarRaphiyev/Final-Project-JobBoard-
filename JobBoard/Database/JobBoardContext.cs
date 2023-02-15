@@ -1,4 +1,6 @@
-﻿namespace JobBoard.Database
+﻿using JobBoard.Models;
+
+namespace JobBoard.Database
 {
 	public class JobBoardContext:IdentityDbContext
 	{
@@ -14,7 +16,12 @@
 		public DbSet<Catagory> catagories { get; set; }
 		public DbSet<Authour> authours { get; set; }
 		public DbSet<Blog> blogs { get; set; }
-
 		public DbSet<ServicesSite> services  { get; set; }
+		public DbSet<ContactİnfoBar> ContactİnfoBars  { get; set; }
+		public DbSet<Contact> Contacts { get; set; }
+		public DbSet<JobType> jobTypes { get; set; }
+		public DbSet<CommentBlog> commentBlogs { get; set; }
+		public DbSet<QuestionsSectionImage> questionsSectionImages  { get; set; }
+		public DbSet<QuestionsAndAnswer> questionsAndAnswers  { get; set; }
 	}
 }

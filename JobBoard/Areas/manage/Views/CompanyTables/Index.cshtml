@@ -1,5 +1,4 @@
-﻿@using JobBoard.Models;
-@model List<AppUser>
+﻿@model List<AppUser>
 @{
     ViewData["Title"] = "Index";
     int count = 0;
@@ -14,6 +13,7 @@
 		<thead class="thead-light">
 			<tr>
 				<th scope="col">#</th>
+				<th scope="col">Image</th>
 				<th scope="col">Company name</th>
 				<th scope="col">Username</th>
 				<th scope="col">Email</th>
@@ -24,9 +24,10 @@
 			@foreach (var item in Model)
 			{
 				count++;
+
 					<tr>
 						<th scope="row">@count</th>
-						
+						<td><img style="width:100px" src="~/uploads/company/@item.Image"/></td>
 						<td>@item.FullName</td>
 						<td>@item.UserName</td>
 						<td>@item.Email</td>

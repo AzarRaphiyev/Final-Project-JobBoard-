@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JobBoard.Helpers;
+using Microsoft.AspNetCore.Mvc;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace JobBoard.Controllers
@@ -6,10 +7,12 @@ namespace JobBoard.Controllers
     public class BlogController : Controller
     {
         private readonly JobBoardContext jobBoardContext;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public BlogController(JobBoardContext jobBoardContext)
+        public BlogController(JobBoardContext jobBoardContext,IWebHostEnvironment webHostEnvironment)
         {
             this.jobBoardContext = jobBoardContext;
+            this.webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -21,17 +24,60 @@ namespace JobBoard.Controllers
             Blog blog=jobBoardContext.blogs.
                                             Include(x=>x.Authour).
                                             Include(x=>x.Catagory).
+                                            Include(x=>x.commentBlogs).
                                             FirstOrDefault(x=>x.Id==id);
 			if (blog == null)
 			{
 				return View("Error");
 			}
+
             BlogDitelsViewModel blogDitelsViewModel = new BlogDitelsViewModel
             {
+                User = jobBoardContext.Users.FirstOrDefault(x => x.UserName == User.Identity.Name),
                 Blog = blog,
                 catagories = jobBoardContext.catagories.ToList(),
             };
+
            return View(blogDitelsViewModel);
+		}
+        [HttpPost]
+        public IActionResult Details(BlogDitelsViewModel blogDitelsVM,int id) 
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("error");
+            }
+			Blog blog = jobBoardContext.blogs.
+											Include(x => x.Authour).
+											Include(x => x.Catagory).
+											Include(x => x.commentBlogs).
+											FirstOrDefault(x => x.Id == id);
+			if (blog == null)
+			{
+				return View("Error");
+			}
+			BlogDitelsViewModel blogDitelsViewModel = new BlogDitelsViewModel
+			{
+				User = jobBoardContext.Users.FirstOrDefault(x => x.UserName == User.Identity.Name),
+				Blog = blog,
+				catagories = jobBoardContext.catagories.ToList(),
+                CommentDescription=blogDitelsVM.CommentDescription
+			};
+
+            CommentBlog commentBlog = new CommentBlog
+            {
+                Data = DateTime.Now,
+                Blog = blogDitelsViewModel.Blog,
+                Username= blogDitelsViewModel.User.UserName,
+                Image=blogDitelsViewModel.User.Image,
+                Description=blogDitelsViewModel.CommentDescription
+            };
+            
+
+            jobBoardContext.commentBlogs.Add(commentBlog);
+            jobBoardContext.SaveChanges();
+            
+            return View(blogDitelsViewModel);
 		}
     }
 }
