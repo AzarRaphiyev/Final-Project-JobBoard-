@@ -19,6 +19,7 @@
 
 		[StringLength(maximumLength: 1000, ErrorMessage = "Maksimum 100 simvol olmalidir")]
 		public string Username { get; set; }
+		
 
 		public Blog? Blog { get; set; }
 	}

@@ -31,7 +31,18 @@
 									
 								}
 							}
-							
+							<li><a asp-action="create" asp-controller="CommitSite">Comment</a></li>
+							@if (User.Identity.IsAuthenticated)
+							{
+								if (User.IsInRole("SuperAdmin"))
+								{
+									<li><a asp-action="index" asp-controller="CommitSite"> Comment List</a></li>
+								}
+								else
+								{
+									
+								}
+							}
 							<li><a href="portfolio.html">Portfolio</a></li>
 							<li><a href="testimonials.html">Testimonials</a></li>
 							<li><a asp-action="index" asp-controller="faq">Frequently Ask Questions</a></li>

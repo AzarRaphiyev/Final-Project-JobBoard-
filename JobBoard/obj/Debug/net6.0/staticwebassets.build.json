@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E14FhBrIYdWYhJq9R1mG3F3+J4/wDS8Ed/SF0nShkMI=",
+  "Hash": "LFYUsBkIoUsYXTmj7YoI3TgIROD6O8imjHy4tBh9Ns4=",
   "Source": "JobBoard",
   "BasePath": "_content/JobBoard",
   "Mode": "Default",
@@ -33131,6 +33131,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\blog\\ul images encapsulate what freedom means to 50 photographers.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\park qusar ağ qara.png",
+      "SourceId": "JobBoard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\",
+      "BasePath": "_content/JobBoard",
+      "RelativePath": "uploads/commentsite/park qusar ağ qara.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\commentsite\\park qusar ağ qara.png"
     },
     {
       "Identity": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\Adidas.png",

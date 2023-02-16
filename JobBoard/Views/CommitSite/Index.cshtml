@@ -1,0 +1,67 @@
+﻿@model List<CommentSite>
+@{
+	ViewData["Title"] = "Index";
+	int count = 0;
+}
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<h1 class="text-white font-weight-bold">Contact Us</h1>
+				<div class="custom-breadcrumbs">
+					<a asp-action="index" asp-controller="home">Home</a> <span class="mx-2 slash">/</span>
+					<span class="text-white"><strong>Comments</strong></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div style="margin-bottom:200px;margin-top:50px;margin-left:20px;margin-right:20px">
+
+	<h1>Comments:</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Fullname</th>
+				<th scope="col">Image</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				count++;
+
+
+				<tr>
+					<th scope="row">@count</th>
+					<td>@item.CommentatorName @item.CommentatorSurname</td>
+					<td>
+						<img style="width:150px" src="~/uploads/commentsite/@item.Commentatorİmage"/>
+						</td>
+					<td>
+						@if (item.IsFavorıte==false)
+						{
+							<a asp-action="update" asp-controller="CommitSite" asp-route-id="@item.Id" class="text-primary" style="font-size:30px"><i class="bi bi-heart-fill"></i> </a>
+						}
+						else
+						{
+							<a asp-action="update" asp-controller="CommitSite" asp-route-id="@item.Id" class="text-danger" style="font-size:30px"><i class="bi bi-heart-fill"></i> </a>
+						}
+						<a asp-action="delete" asp-controller="CommitSite" asp-route-id="@item.Id" class="text-danger" style="font-size:30px"> <i class="bi bi-trash3-fill"></i> </a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+
+
+
+
+
+</div>
+

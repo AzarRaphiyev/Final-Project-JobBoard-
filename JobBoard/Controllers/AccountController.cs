@@ -195,7 +195,7 @@ namespace JobBoard.Controllers
 		public async Task<IActionResult> LogOut()
 		{
 			await signInManager.SignOutAsync();
-			return RedirectToAction("login");
+			return RedirectToAction(nameof(Login));
 		}
 	}
 }

@@ -151,6 +151,45 @@ namespace JobBoard.Migrations
                     b.ToTable("commentBlogs");
                 });
 
+            modelBuilder.Entity("JobBoard.Models.CommentSite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("CommentatorName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("CommentatorSurname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Commentatorİmage")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("Data")
+                        .HasMaxLength(100)
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsFavorıte")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("commentSites");
+                });
+
             modelBuilder.Entity("JobBoard.Models.Company", b =>
                 {
                     b.Property<int>("Id")

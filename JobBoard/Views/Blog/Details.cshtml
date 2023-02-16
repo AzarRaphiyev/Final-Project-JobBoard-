@@ -56,8 +56,7 @@
                         }
                             </ul>
 
-                            @if (User.Identity.IsAuthenticated)
-                    {
+                    
                             <div class="comment-form-wrap pt-5">
                                 <h3 class="mb-5">Leave a comment</h3>
 
@@ -67,12 +66,18 @@
                                      <textarea asp-for="CommentDescription" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Post Comment" class="btn btn-primary btn-md">
+                                        @if (!User.Identity.IsAuthenticated)
+                                {
+                                        <button type="submit"  disabled class="btn btn-primary btn-md" > Post Comment </button>
+                                        <p><a asp-action="login" asp-controller="account" >Login</a> to post a comment</p>
+                                }
+                                else
+                                {
+                                        <input type="submit" value="Post Comment"  class="btn btn-primary btn-md">
+                                }
                                     </div>
                                 </form>
                             </div>
-                        
-                    }
                         </div>
                         
 

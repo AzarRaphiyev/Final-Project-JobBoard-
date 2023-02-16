@@ -1,5 +1,7 @@
 ﻿
 
+using JobBoard.Models;
+
 namespace JobBoard.Areas.manage.Controllers
 {
     [Area("manage")]
@@ -130,6 +132,50 @@ namespace JobBoard.Areas.manage.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("login");
         }
+        
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel forgotPasswordVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            
+            AppUser appUser= await userManager.FindByEmailAsync(forgotPasswordVM.Email);
+            if (appUser == null) { return BadRequest(); }
 
-    }
+            string token=await userManager.GeneratePasswordResetTokenAsync(appUser);
+
+            string link = Url.Action("ResetPassword","Account",new {userid=appUser.Id , token=token},HttpContext.Request.Scheme);
+
+
+            return Ok(link);
+        }
+        public async Task< IActionResult> ResetPassword(string userid,string token)
+        {
+			if(string.IsNullOrWhiteSpace(userid) || string.IsNullOrWhiteSpace(token)) { return BadRequest(); }
+			AppUser appUser = await userManager.FindByIdAsync(userid);
+			if (appUser == null) { return BadRequest(); }
+			return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel resetPasswordVM,string userid,string token)
+        {
+			if (string.IsNullOrWhiteSpace(userid) || string.IsNullOrWhiteSpace(token)) { return BadRequest(); }
+			AppUser appUser = await userManager.FindByIdAsync(userid);
+			if (appUser == null) { return BadRequest(); }
+            token = token + "vvvn";
+            var res = await userManager.ResetPasswordAsync(appUser,token,resetPasswordVM.NewPassword);
+            if (res.Succeeded) { return RedirectToAction("Login"); }
+            return BadRequest();
+		}
+
+	}
 }

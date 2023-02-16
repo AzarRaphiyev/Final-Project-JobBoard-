@@ -23,5 +23,6 @@ namespace JobBoard.Database
 		public DbSet<CommentBlog> commentBlogs { get; set; }
 		public DbSet<QuestionsSectionImage> questionsSectionImages  { get; set; }
 		public DbSet<QuestionsAndAnswer> questionsAndAnswers  { get; set; }
+		public DbSet<CommentSite> commentSites { get; set; }
 	}
 }
