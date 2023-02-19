@@ -14,6 +14,7 @@ namespace JobBoard.Controllers
 		{
 			return View();
 		}
+
 		public IActionResult Details(int id)
 		{
 			Authour authour=jobBoardContext.authours.FirstOrDefault(x=>x.Id==id);

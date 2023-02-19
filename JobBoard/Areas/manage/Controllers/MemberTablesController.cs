@@ -14,8 +14,9 @@ namespace JobBoard.Areas.manage.Controllers
 		}
 		public IActionResult Index()
 		{
-			List<AppUser> Members = jobBoardContext.Users.Where(x=>x.Role=="Member").ToList();
-			return View(Members);
+
+			List<AppUser>	users = jobBoardContext.Users.Where(x=>x.Role=="Member").ToList();
+			return View(users);
 		}
 		public IActionResult Delete(string id)
 		{

@@ -10,7 +10,7 @@ namespace JobBoard.Services
         private readonly MailSettings _mailSettings;
         public MailService(IOptions<MailSettings> mailSettings)
         {
-            _mailSettings = mailSettings.Value;
+            this._mailSettings = mailSettings.Value;
         }
 
         public async Task SendEmailAsync(MailRequestVM mailRequest)

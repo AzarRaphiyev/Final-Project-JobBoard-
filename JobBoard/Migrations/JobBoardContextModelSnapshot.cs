@@ -161,8 +161,8 @@ namespace JobBoard.Migrations
 
                     b.Property<string>("Comment")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("CommentatorName")
                         .IsRequired()
@@ -209,7 +209,6 @@ namespace JobBoard.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("FecebookUrl")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -224,12 +223,10 @@ namespace JobBoard.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("InstagramUrl")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("LinkedinUrl")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -244,7 +241,6 @@ namespace JobBoard.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("TwitterUrl")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -411,6 +407,97 @@ namespace JobBoard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("miniInfoBars");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.PoerfolioCatagory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("poerfolioCatagories");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.PortfolioItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Client")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeamId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<string>("WebUrl")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime>("YearStarted")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("poerfolioCatagoriesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TeamId");
+
+                    b.HasIndex("poerfolioCatagoriesId");
+
+                    b.ToTable("portfolioItems");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.PortfolioItemImages", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Images")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool?>("IsPoster")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("PortfolioItemId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PortfolioItemId");
+
+                    b.ToTable("portfolioItemImages");
                 });
 
             modelBuilder.Entity("JobBoard.Models.Position", b =>
@@ -764,6 +851,14 @@ namespace JobBoard.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<string>("Cv")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool?>("Enabled")
+                        .IsRequired()
+                        .HasColumnType("bit");
+
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -809,6 +904,36 @@ namespace JobBoard.Migrations
                         .IsRequired();
 
                     b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.PortfolioItem", b =>
+                {
+                    b.HasOne("JobBoard.Models.Team", "Team")
+                        .WithMany()
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JobBoard.Models.PoerfolioCatagory", "poerfolioCatagories")
+                        .WithMany()
+                        .HasForeignKey("poerfolioCatagoriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Team");
+
+                    b.Navigation("poerfolioCatagories");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.PortfolioItemImages", b =>
+                {
+                    b.HasOne("JobBoard.Models.PortfolioItem", "portfolioItem")
+                        .WithMany("portfolioItemImages")
+                        .HasForeignKey("PortfolioItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("portfolioItem");
                 });
 
             modelBuilder.Entity("JobBoard.Models.Team", b =>
@@ -881,6 +1006,11 @@ namespace JobBoard.Migrations
             modelBuilder.Entity("JobBoard.Models.Blog", b =>
                 {
                     b.Navigation("commentBlogs");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.PortfolioItem", b =>
+                {
+                    b.Navigation("portfolioItemImages");
                 });
 #pragma warning restore 612, 618
         }

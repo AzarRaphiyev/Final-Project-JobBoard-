@@ -21,11 +21,13 @@ namespace JobBoard.Controllers
         }
         public IActionResult Details(int id)
         {
+          
             Blog blog=jobBoardContext.blogs.
                                             Include(x=>x.Authour).
                                             Include(x=>x.Catagory).
-                                            Include(x=>x.commentBlogs).
+                                            Include(x=>x.commentBlogs.OrderByDescending(x => x.Id)).
                                             FirstOrDefault(x=>x.Id==id);
+
 			if (blog == null)
 			{
 				return View("Error");
@@ -35,7 +37,7 @@ namespace JobBoard.Controllers
             {
                 User = jobBoardContext.Users.FirstOrDefault(x => x.UserName == User.Identity.Name),
                 Blog = blog,
-                catagories = jobBoardContext.catagories.ToList(),
+                catagories = jobBoardContext.catagories.OrderByDescending(x=>x.Id).ToList(),
             };
 
            return View(blogDitelsViewModel);
@@ -43,19 +45,16 @@ namespace JobBoard.Controllers
         [HttpPost]
         public IActionResult Details(BlogDitelsViewModel blogDitelsVM,int id) 
         {
-            if (!ModelState.IsValid)
-            {
-                return View("error");
-            }
 			Blog blog = jobBoardContext.blogs.
 											Include(x => x.Authour).
 											Include(x => x.Catagory).
-											Include(x => x.commentBlogs).
+											Include(x => x.commentBlogs.OrderByDescending(x=>x.Id)).
 											FirstOrDefault(x => x.Id == id);
 			if (blog == null)
 			{
 				return View("Error");
 			}
+
 			BlogDitelsViewModel blogDitelsViewModel = new BlogDitelsViewModel
 			{
 				User = jobBoardContext.Users.FirstOrDefault(x => x.UserName == User.Identity.Name),
@@ -64,6 +63,10 @@ namespace JobBoard.Controllers
                 CommentDescription=blogDitelsVM.CommentDescription
 			};
 
+            if (!ModelState.IsValid)
+            {
+                return View(blogDitelsViewModel);
+            }
             CommentBlog commentBlog = new CommentBlog
             {
                 Data = DateTime.Now,

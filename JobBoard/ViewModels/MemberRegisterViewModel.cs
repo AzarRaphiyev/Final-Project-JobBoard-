@@ -28,6 +28,18 @@
 		[DataType(DataType.Password)]
 		[Compare("Password")]
 		public string ConfirePassword { get; set; }
-	
+
+		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
+		public string? Image { get; set; }
+
+		[NotMapped]
+		public IFormFile Imagefile { get; set; }
+
+		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
+		public string? Cv { get; set; }
+
+		[NotMapped]
+		public IFormFile CvFile { get; set; }
+
 	}
 }

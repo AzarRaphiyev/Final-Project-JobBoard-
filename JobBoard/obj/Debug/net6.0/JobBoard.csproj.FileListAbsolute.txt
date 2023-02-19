@@ -273,3 +273,6 @@ C:\Users\MSI\Desktop\FinalProject\JobBoard\obj\Debug\net6.0\refint\JobBoard.dll
 C:\Users\MSI\Desktop\FinalProject\JobBoard\obj\Debug\net6.0\JobBoard.pdb
 C:\Users\MSI\Desktop\FinalProject\JobBoard\obj\Debug\net6.0\JobBoard.genruntimeconfig.cache
 C:\Users\MSI\Desktop\FinalProject\JobBoard\obj\Debug\net6.0\ref\JobBoard.dll
+C:\Users\MSI\Desktop\FinalProject\JobBoard\bin\Debug\net6.0\MailKit.dll
+C:\Users\MSI\Desktop\FinalProject\JobBoard\bin\Debug\net6.0\MimeKit.dll
+C:\Users\MSI\Desktop\FinalProject\JobBoard\bin\Debug\net6.0\BouncyCastle.Crypto.dll

@@ -17,7 +17,8 @@
 				<th scope="col">FullName</th>
 				<th scope="col">Username</th>
 				<th scope="col">Email</th>
-				<th scope="col">Phone Number</th>
+				<th scope="col">Image</th>
+				<th scope="col">Cv</th>
 				<th scope="col">Action</th>
 			</tr>
 		</thead>
@@ -30,7 +31,13 @@
 						<td>@item.FullName</td>
 						<td>@item.UserName</td>
 						<td>@item.Email</td>
-						<td>@item.PhoneNumber</td>
+						<td>
+							<img style="width:150px" src="~/uploads//users/@item.Image"/>
+						</td> 
+						<td>
+							<a href="~/uploads/member/cv/@item.Cv">Show CV</a>
+						</td>
+						
 						<td>
 							<a asp-action="delete" asp-controller="MemberTables" asp-route-id="@item.Id" class="btn btn-danger"> <i class="fas fa-trash"></i> </a>
 						</td>

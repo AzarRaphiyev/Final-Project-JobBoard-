@@ -24,5 +24,8 @@ namespace JobBoard.Database
 		public DbSet<QuestionsSectionImage> questionsSectionImages  { get; set; }
 		public DbSet<QuestionsAndAnswer> questionsAndAnswers  { get; set; }
 		public DbSet<CommentSite> commentSites { get; set; }
+		public DbSet<PoerfolioCatagory> poerfolioCatagories { get; set; }
+		public DbSet<PortfolioItem> portfolioItems { get; set; }
+		public DbSet<PortfolioItemImages> portfolioItemImages { get; set; }
 	}
 }

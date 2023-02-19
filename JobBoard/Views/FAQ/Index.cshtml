@@ -29,19 +29,19 @@
             }
                     <div class="col-lg-5 ml-auto">
                         @foreach (var item in Model.QuestionsAndAnswers)
-                {
+                    {
                         <div class="accordion-item">
                             <h3 class="mb-0 heading">
-                                <a class="btn-block h4" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="true" aria-controls="collapseFive">@item.Question<span class="icon"></span></a>
+                            <a class="btn-block h4" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="true" aria-controls="collapseFive">@item.Question<span class="icon"></span></a>
                             </h3>
-                            <div id="collapseFive" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                        <div id="collapseFive" class="collapse toggle-a" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="body-text">
                                     <p>@item.Answer</p>
                                 </div>
                             </div>
                         </div>
                     
-                }
+                    }
                     </div>
                 </div>
             </div>

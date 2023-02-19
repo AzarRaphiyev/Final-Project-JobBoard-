@@ -14,12 +14,13 @@ namespace JobBoard.Controllers
             this.jobBoardcontext = jobBoardcontext;
             this.webHostEnvironment = webHostEnvironment;
         }
-        [Authorize(Roles ="SuperAdmin,Admin")]
         public IActionResult Index()
         {
             List<CommentSite>   comments = jobBoardcontext.commentSites.ToList();
             return View(comments);
         }
+
+
         public IActionResult Create()
         {
             return View();
@@ -55,37 +56,6 @@ namespace JobBoard.Controllers
             jobBoardcontext.SaveChanges();
             return RedirectToAction("index","Home");
         }
-		[Authorize(Roles = "SuperAdmin,Admin")]
-		public IActionResult Update(int id)
-        {
-            CommentSite commentSite = jobBoardcontext.commentSites.FirstOrDefault(x => x.Id == id);
-            if (commentSite == null)
-            {
-                return View("error");
-            }
-            return View(commentSite);
-        }
-        [HttpPost]
-        public IActionResult Update(CommentSite commentSite)
-        {
-            if (commentSite == null) { return View("error"); }
-            CommentSite extCommentSite = jobBoardcontext.commentSites.FirstOrDefault(x => x.Id == commentSite.Id);
-            if (extCommentSite == null) { return View("error"); }
-
-            extCommentSite.Data = DateTime.Now;
-            extCommentSite.IsFavorıte = commentSite.IsFavorıte;
-            jobBoardcontext.SaveChanges();
-            return RedirectToAction("Index");
-        }
-		[Authorize(Roles = "SuperAdmin,Admin")]
-		public IActionResult Delete(int id)
-        {
-            CommentSite commentSite=jobBoardcontext.commentSites.FirstOrDefault(x => x.Id == id);
-            if (commentSite == null) { return View("error"); }
-            FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/commentsite", commentSite.Commentatorİmage);
-            jobBoardcontext.commentSites.Remove(commentSite);
-            jobBoardcontext.SaveChanges();
-            return RedirectToAction("Index");   
-        }
+		
     }
 }

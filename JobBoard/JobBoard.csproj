@@ -20,12 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\uploads\company\" />
     <Folder Include="wwwroot\uploads\member\cv\" />
     <Folder Include="wwwroot\uploads\MiniInfoBar\" />
     <Folder Include="wwwroot\uploads\authour\" />
     <Folder Include="wwwroot\uploads\blog\" />
     <Folder Include="wwwroot\uploads\commentsite\" />
+    <Folder Include="wwwroot\uploads\portfolio\" />
     <Folder Include="wwwroot\uploads\QuestionsSectionImage\" />
     <Folder Include="wwwroot\uploads\team\" />
   </ItemGroup>

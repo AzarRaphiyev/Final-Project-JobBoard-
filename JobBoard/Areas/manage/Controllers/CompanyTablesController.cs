@@ -14,7 +14,7 @@ namespace JobBoard.Areas.manage.Controllers
 		}
 		public IActionResult Index()
 		{
-			List<AppUser> Companies= jobBoardContext.Users.Where(x=>x.Role=="Company").ToList();
+			List<AppUser> Companies= jobBoardContext.Users.Where(x=>x.Role=="Company"&&x.Enabled==true).ToList();
 			return View(Companies);
 		}
 		public IActionResult Delete(string id)
@@ -24,8 +24,8 @@ namespace JobBoard.Areas.manage.Controllers
 			{
 				return View("Error");
 			}
-			Company company=jobBoardContext.companies.FirstOrDefault(x => x.Fullname==user.FullName);
-			jobBoardContext.companies.Remove(company);
+		
+
 			jobBoardContext.Remove(user);
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index");

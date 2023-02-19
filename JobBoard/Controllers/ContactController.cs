@@ -12,23 +12,19 @@ namespace JobBoard.Controllers
 		{
 			this.jobBoardContext = jobBoardContext;
 		}
-		[Authorize(Roles ="SuperAdmin")]
-		public IActionResult Index()
-		{
-			List<Contact> contacts = jobBoardContext.Contacts.ToList();
-			return View(contacts);
-		}
 		public IActionResult Create()
 		{
-			ViewBag.InfoBar=jobBoardContext.ContactİnfoBars.Take(1).ToString();
+			ViewBag.InfoBar=jobBoardContext.ContactİnfoBars.Take(1).ToList();
+			ViewBag.HappyComment=jobBoardContext.commentSites.Where(x=>x.IsFavorıte==true).Take(2).ToList();
+
 			return View();
 		}
-
 		[HttpPost]
 		public IActionResult Create(Contact contact)
 
 		{
-			ViewBag.InfoBar = jobBoardContext.ContactİnfoBars.Take(1).ToString();
+			ViewBag.InfoBar = jobBoardContext.ContactİnfoBars.Take(1).ToList();
+			ViewBag.HappyComment = jobBoardContext.commentSites.Where(x => x.IsFavorıte == true).Take(2).ToList();
 			if (!ModelState.IsValid)
 			{
 				return View();
@@ -43,23 +39,5 @@ namespace JobBoard.Controllers
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index","home");
 		}
-
-		[Authorize(Roles = "SuperAdmin")]
-		public IActionResult Delete(int id)
-		{
-			Contact deleteContact= jobBoardContext.Contacts.FirstOrDefault(x=>x.Id==id);
-			if (deleteContact==null) return View("error");
-			jobBoardContext.Contacts.Remove(deleteContact);
-			jobBoardContext.SaveChanges();
-			return RedirectToAction("index"); 
-		}
-
-		public IActionResult Details(int id) 
-		{
-			Contact contact= jobBoardContext.Contacts.FirstOrDefault(x=>x.Id==id);
-			if (contact == null) return View("error");
-			return View(contact);
-		}
-
 	}
 }

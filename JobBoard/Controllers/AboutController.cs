@@ -14,8 +14,8 @@ namespace JobBoard.Controllers
         {
             AboutViewModel aboutVM = new AboutViewModel
             {
-                members = jobBoardContext.members.ToList(),
-                companies = jobBoardContext.companies.ToList(),
+                members = jobBoardContext.Users.Where(x=>x.Role=="Member").ToList(),
+                companies = jobBoardContext.Users.Where(x=>x.Role=="Company"&& x.Enabled==true).ToList(),
                 TeamMembers=jobBoardContext.JonTeamMembers.Include(x=>x.position).Take(2).OrderBy(x=>x.Order).ToList(),
                 miniInfoBars = jobBoardContext.miniInfoBars.OrderBy(x=>x.order).Take(2).ToList(),
             };

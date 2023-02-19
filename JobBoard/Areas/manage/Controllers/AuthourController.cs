@@ -76,6 +76,7 @@ namespace JobBoard.Areas.manage.Controllers
 			}
 			exstAuthour.Fullname= authour.Fullname;
 			exstAuthour.Description= authour.Description;
+			exstAuthour.AuthourStory = authour.AuthourStory;
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index");
 		}

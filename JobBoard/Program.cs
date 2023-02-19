@@ -19,6 +19,9 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 }).AddEntityFrameworkStores<JobBoardContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<LayoutServices>();
 builder.Services.AddScoped<AdminLayoutService>();
+
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+
 builder.Services.AddTransient<IMailService, MailService>();
 
 

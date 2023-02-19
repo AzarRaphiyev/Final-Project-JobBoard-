@@ -1,6 +1,7 @@
 ﻿
 
 using JobBoard.Models;
+using JobBoard.Services;
 
 namespace JobBoard.Areas.manage.Controllers
 {
@@ -10,51 +11,55 @@ namespace JobBoard.Areas.manage.Controllers
         private readonly UserManager<AppUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly SignInManager<AppUser> signInManager;
-
-        public AccountController(UserManager<AppUser> userManager,RoleManager<IdentityRole> roleManager,SignInManager<AppUser> signInManager )
-        {
-            this.userManager = userManager;
-            this.roleManager = roleManager;
-            this.signInManager = signInManager;
-        }
-
-
-        //public async Task<IActionResult> CreateSuperAdmin()
-        //{
-        //    AppUser SuperAdmin = new AppUser
-        //    {
-        //        Email = "Raphiyev@gmail.com",
-        //        UserName = "SuperAdmin",
-        //        FullName = "Azer Raphiyev",
-        //        Image = "rəngli.png"
-        //    };
-        //    var result = await userManager.CreateAsync(SuperAdmin, "Azer2233");
-        //    return Ok(SuperAdmin);
-        //}
-        //public async Task<IActionResult> CreateRole()
-        //{
-        //    IdentityRole role1=new IdentityRole("SuperAdmin");
-        //    IdentityRole role2=new IdentityRole("Admin");
-        //    IdentityRole role3=new IdentityRole("Company");
-        //    IdentityRole role4=new IdentityRole("Member");
-        //    await roleManager.CreateAsync(role1);
-        //    await roleManager.CreateAsync(role2);
-        //    await roleManager.CreateAsync(role3);
-        //    await roleManager.CreateAsync(role4);
-        //    return Ok("Created Roles");
-        //}
-        //public async Task<IActionResult> AddRole()
-        //{
-        //    AppUser user = await userManager.FindByEmailAsync("Raphiyev@gmail.com");
-        //    await userManager.AddToRoleAsync(user, "SuperAdmin");
-        //    return Ok("Add Role");
-        //}
+        private readonly IMailService mailService;
 
 
 
+		public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager, IMailService mailService)
+		{
+			this.userManager = userManager;
+			this.roleManager = roleManager;
+			this.signInManager = signInManager;
+			this.mailService = mailService;
+		}
 
 
-        public IActionResult Index()
+		//public async Task<IActionResult> CreateSuperAdmin()
+		//{
+		//    AppUser SuperAdmin = new AppUser
+		//    {
+		//        Email = "Raphiyev@gmail.com",
+		//        UserName = "SuperAdmin",
+		//        FullName = "Azer Raphiyev",
+		//        Image = "rəngli.png"
+		//    };
+		//    var result = await userManager.CreateAsync(SuperAdmin, "Azer2233");
+		//    return Ok(SuperAdmin);
+		//}
+		//public async Task<IActionResult> CreateRole()
+		//{
+		//    IdentityRole role1=new IdentityRole("SuperAdmin");
+		//    IdentityRole role2=new IdentityRole("Admin");
+		//    IdentityRole role3=new IdentityRole("Company");
+		//    IdentityRole role4=new IdentityRole("Member");
+		//    await roleManager.CreateAsync(role1);
+		//    await roleManager.CreateAsync(role2);
+		//    await roleManager.CreateAsync(role3);
+		//    await roleManager.CreateAsync(role4);
+		//    return Ok("Created Roles");
+		//}
+		//public async Task<IActionResult> AddRole()
+		//{
+		//    AppUser user = await userManager.FindByEmailAsync("Raphiyev@gmail.com");
+		//    await userManager.AddToRoleAsync(user, "SuperAdmin");
+		//    return Ok("Add Role");
+		//}
+
+
+
+
+
+		public IActionResult Index()
         {
             return View();
         }
@@ -73,7 +78,12 @@ namespace JobBoard.Areas.manage.Controllers
                 ModelState.AddModelError("", "Email or Password invalid");
                 return View();
             }
-            var result = await signInManager.PasswordSignInAsync(member, loginVM.Password, false, false);
+			if (member.Enabled == false)
+			{
+				ModelState.AddModelError("", "Sizin Hesabini admin terefinden tesdiqlenmeyib");
+				return View();
+			}
+			var result = await signInManager.PasswordSignInAsync(member, loginVM.Password, false, false);
             if (!result.Succeeded)
             {
                 ModelState.AddModelError("", "Email or Password invalid");
@@ -112,8 +122,10 @@ namespace JobBoard.Areas.manage.Controllers
                 Email = registerVM.Email,
                 UserName = registerVM.UserName,
                 Role="Admin",
-                Image= "default-profile.png"
+                Image= "default-profile.png",
+                Enabled=true
 			};
+
             var result = await userManager.CreateAsync(member,registerVM.Password);
             if (!result.Succeeded)
             {
@@ -147,14 +159,18 @@ namespace JobBoard.Areas.manage.Controllers
             }
             
             AppUser appUser= await userManager.FindByEmailAsync(forgotPasswordVM.Email);
-            if (appUser == null) { return BadRequest(); }
+            if (appUser == null) 
+            {
+                ModelState.AddModelError("Email", "No account found in this email");
+                return View();
+            }
 
             string token=await userManager.GeneratePasswordResetTokenAsync(appUser);
 
-            string link = Url.Action("ResetPassword","Account",new {userid=appUser.Id , token=token},HttpContext.Request.Scheme);
+            string link = Url.Action("ResetPassword","Account",new { userid=appUser.Id ,token=token },HttpContext.Request.Scheme);
+            await mailService.SendEmailAsync(new MailRequestVM { ToEmail = forgotPasswordVM.Email, Subject = "Reset Your Password", Body = $"<a href={link}> Reset Password <a/>" });
 
-
-            return Ok(link);
+            return RedirectToAction(nameof(Login));
         }
         public async Task< IActionResult> ResetPassword(string userid,string token)
         {
@@ -171,7 +187,7 @@ namespace JobBoard.Areas.manage.Controllers
 			if (string.IsNullOrWhiteSpace(userid) || string.IsNullOrWhiteSpace(token)) { return BadRequest(); }
 			AppUser appUser = await userManager.FindByIdAsync(userid);
 			if (appUser == null) { return BadRequest(); }
-            token = token + "vvvn";
+           
             var res = await userManager.ResetPasswordAsync(appUser,token,resetPasswordVM.NewPassword);
             if (res.Succeeded) { return RedirectToAction("Login"); }
             return BadRequest();

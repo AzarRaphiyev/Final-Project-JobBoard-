@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(maximumLength:500,ErrorMessage = "The maximum can be 500 characters")]
+        [StringLength(maximumLength:1000,ErrorMessage = "The maximum can be 1000 characters")]
         public string Comment { get; set; }
         [Required]
         [StringLength(maximumLength: 30, ErrorMessage = "The maximum can be 30 characters")]

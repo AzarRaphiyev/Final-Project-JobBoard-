@@ -33,16 +33,12 @@
 		[StringLength(maximumLength: 3000, ErrorMessage = "Maksimum 3000 simvol ola biler")]
 		public string Description { get; set; }
 
-		[Required]
 		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? InstagramUrl { get; set; }
-		[Required]
 		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? FecebookUrl { get; set; }
-		[Required]
 		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? TwitterUrl { get; set; }
-		[Required]
 		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? LinkedinUrl { get; set; }
 	}

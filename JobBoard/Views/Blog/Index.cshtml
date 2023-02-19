@@ -12,7 +12,7 @@
                         <h1 class="text-white font-weight-bold">Our Blog</h1>
                         <div class="custom-breadcrumbs">
                             <a asp-action="index" asp-controller="home">Home</a> <span class="mx-2 slash">/</span>
-                            <span class="text-white"><strong>About Us</strong></span>
+                            <span class="text-white"><strong>Blog</strong></span>
                         </div>
                     </div>
                 </div>
@@ -26,8 +26,8 @@
                  <div class="col-md-6 col-lg-4 mb-5">
                         <a asp-action="details" asp-controller="blog" asp-route-id="@item.Id"><img src="~/uploads/blog/@item.Image" alt="Image" class="img-fluid rounded mb-4"></a>
                     <h3><a asp-action="details" asp-controller="blog" asp-route-id="@item.Id" class="text-black">@item.Title</a></h3>
-                        <div>@item.Data<span class="mx-2">|</span> <span>@item.Catagory.CatagoryName</span></div>
-                    </div>
+                        <div>@item.Data?.ToString("dd MMMM yyyy ")<span class="mx-2">|</span> <span>@item.Catagory.CatagoryName</span></div>
+                 </div>
             }
                    
                     

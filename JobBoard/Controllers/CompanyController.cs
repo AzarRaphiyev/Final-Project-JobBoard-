@@ -30,11 +30,13 @@ namespace JobBoard.Controllers
 		{
 
 			Company ExstCompany= jobBoardContext.companies.FirstOrDefault(x=>x.Id == company.Id);
-
 			if (ExstCompany==null)
 			{
 				return View("error");
 			}
+
+			AppUser appUser= jobBoardContext.Users.FirstOrDefault(x=>x.UserName==company.UserName);
+			if (appUser==null) { return View("error"); }
 
 
 			if (company.ImageFile!=null)
@@ -49,9 +51,10 @@ namespace JobBoard.Controllers
 					ModelState.AddModelError("ImageFile", "The size cannot exceed 3 MB");
 					return View();
 				}
-				FileManager.DeleteFile(webHostEnvironment.WebRootPath,"uploads/company",ExstCompany.Image);
-				ExstCompany.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/company", company.ImageFile);
+				FileManager.DeleteFile(webHostEnvironment.WebRootPath,"uploads/users",ExstCompany.Image);
+				ExstCompany.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/users", company.ImageFile);
 			}
+
 			ExstCompany.Fullname = company.Fullname;
 			ExstCompany.Location= company.Location;
 			ExstCompany.Description= company.Description;
@@ -60,6 +63,8 @@ namespace JobBoard.Controllers
 			ExstCompany.FecebookUrl= company.FecebookUrl;
 			ExstCompany.LinkedinUrl= company.LinkedinUrl;
 			ExstCompany.TwitterUrl= company.TwitterUrl;
+			appUser.FullName = company.Fullname;
+
 
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index","Home");
@@ -71,8 +76,7 @@ namespace JobBoard.Controllers
 			{
 				return NotFound();
 			}
-
-			if (company.ImageFile!=null) { FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/company", company.Image); }
+			if (company.ImageFile!=null) { FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/users", company.Image); }
 
 			AppUser user = await userManager.FindByEmailAsync(company.Email);
 			if (user==null) { return NotFound(); }

@@ -221,6 +221,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\sq_img_9.jpg"
     },
     {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\assets\\js\\Azer.js",
+      "PackagePath": "staticwebassets\\assets\\js\\Azer.js"
+    },
+    {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\assets\\js\\bootstrap-select.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\bootstrap-select.min.js"
     },
@@ -7753,6 +7757,10 @@
       "PackagePath": "staticwebassets\\uploads\\authour\\park qusar ağ qara.png"
     },
     {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\blog\\616a7d4de092f0de3d02b4729fce639e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\616a7d4de092f0de3d02b4729fce639e.jpg"
+    },
+    {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\blog\\9 Ways to Take Responsibility for Your Life - Thrive Global.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\9 Ways to Take Responsibility for Your Life - Thrive Global.jpg"
     },
@@ -7801,32 +7809,32 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\ul images encapsulate what freedom means to 50 photographers.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\park qusar ağ qara.png",
-      "PackagePath": "staticwebassets\\uploads\\commentsite\\park qusar ağ qara.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\side profile.jpg",
+      "PackagePath": "staticwebassets\\uploads\\commentsite\\side profile.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\Adidas.png",
-      "PackagePath": "staticwebassets\\uploads\\company\\Adidas.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\Warm Neutrals Modern Simple Resume.pdf",
+      "PackagePath": "staticwebassets\\uploads\\member\\Warm Neutrals Modern Simple Resume.pdf"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\indir.png",
-      "PackagePath": "staticwebassets\\uploads\\company\\indir.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\cv\\Warm Neutrals Modern Simple Resume.pdf",
+      "PackagePath": "staticwebassets\\uploads\\member\\cv\\Warm Neutrals Modern Simple Resume.pdf"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\job_logo_1.jpg",
-      "PackagePath": "staticwebassets\\uploads\\company\\job_logo_1.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\cv\\Голубой и Черный Академическое Резюме.pdf",
+      "PackagePath": "staticwebassets\\uploads\\member\\cv\\Голубой и Черный Академическое Резюме.pdf"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\job_logo_3.jpg",
-      "PackagePath": "staticwebassets\\uploads\\company\\job_logo_3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\company\\job_logo_5.jpg",
-      "PackagePath": "staticwebassets\\uploads\\company\\job_logo_5.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg",
+      "PackagePath": "staticwebassets\\uploads\\member\\img\\b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\default-profile.png",
       "PackagePath": "staticwebassets\\uploads\\member\\img\\default-profile.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\vyv230a66nq52bav0m198uy1u07hz3uz.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\member\\img\\vyv230a66nq52bav0m198uy1u07hz3uz.jpeg"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\team\\IMG_20220929_215928.jpg",
@@ -7839,6 +7847,18 @@
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\team\\hazırlanacaq.png",
       "PackagePath": "staticwebassets\\uploads\\team\\hazırlanacaq.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\default-profile.png",
+      "PackagePath": "staticwebassets\\uploads\\users\\default-profile.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\flying_car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2.png",
+      "PackagePath": "staticwebassets\\uploads\\users\\flying_car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\rəngli.png",
+      "PackagePath": "staticwebassets\\uploads\\users\\rəngli.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.JobBoard.Microsoft.AspNetCore.StaticWebAssets.props",

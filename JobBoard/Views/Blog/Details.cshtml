@@ -2,10 +2,14 @@
 @{
     ViewData["Title"] = "Details";
     int countComment = 0;
+        if (Model.Blog?.commentBlogs != null)
+        {
     @foreach (var item in Model.Blog.commentBlogs)
     {
         countComment++;
+
     }
+        }
 }
 
 
@@ -17,7 +21,7 @@
                         <div class="custom-breadcrumbs mb-0">
                     <span class="text-white">Posted by</span class="text-white"> @Model.Blog.Authour.Fullname</a>
                             <span class="mx-2 slash">&bullet;</span>
-                    <span class="text-white"><strong>@Model.Blog.Data.ToString()</strong></span>
+                    <span class="text-white"><strong> @Model.Blog.Data?.ToString("dd MMMM yyyy HH:dd") </strong></span>
                         </div>
                         <h1 class="text-white">@Model.Blog.Title</h1>
                     </div>
@@ -40,20 +44,20 @@
                         <div class="pt-5">
                             <h3 class="mb-5">@countComment Comments</h3>
                             <ul class="comment-list">
+
                                 @foreach (var item in Model.Blog.commentBlogs)
-                        {
+                            {
                                 <li class="comment">
-                                  @* <div class="vcard bio">
-                                        <img src="images/person_2.jpg" alt="Image placeholder">
-                                    </div>*@
+                                   <div class="vcard bio">
+                                        <img src="~/uploads//users/@item.Image" alt="Image placeholder">
+                                    </div>
                                     <div class="comment-body">
                                         <h3>@item.Username</h3>
-                                        <div class="meta">@item.Data</div>
-                                        <p>@item.Description</p>
-                                        <p><a href="#" class="reply">Reply</a></p>
+                                        <div class="meta">@item.Data.ToString("dd MMMM yyyy HH:dd")</div>
+                                        <p>@item?.Description</p>
                                     </div>
                                 </li>
-                        }
+                            }
                             </ul>
 
                     
@@ -64,6 +68,7 @@
                                     <div class="form-group">
                                         <label asp-for="CommentDescription">Message</label>
                                      <textarea asp-for="CommentDescription" cols="30" rows="10" class="form-control"></textarea>
+                                     <span asp-validation-for="CommentDescription" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
                                         @if (!User.Identity.IsAuthenticated)

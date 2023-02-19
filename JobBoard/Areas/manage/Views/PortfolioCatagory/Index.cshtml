@@ -1,0 +1,38 @@
+﻿@model List<PoerfolioCatagory>
+@{
+	ViewData["Title"] = "Index";
+	int count = 0;
+}
+
+<div class="mx-5">
+	<div class="d-flex justify-content-between align-content-center">
+
+		<h3>Portfolio Catagories:</h3>
+		<a asp-action="create" asp-controller="PortfolioCatagory" class="btn btn-primary">+Add</a>
+	</div>
+	<table class="table table-hover" style="margin-top:10px">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Catagory Name</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				count++;
+					<tr>
+						<th scope="row">@count</th>
+						<td>@item.Name</td>
+						<td>
+						<a asp-action="update" asp-controller="PortfolioCatagory" asp-route-id="@item.Id" class="btn btn-outline-primary"> <i class="bi bi-pencil-square"></i> </a>
+						<a asp-action="delete" asp-controller="PortfolioCatagory" asp-route-id="@item.Id" class="btn btn-outline-danger"> <i class="fas fa-trash"></i> </a>
+						</td>
+					</tr>
+			}
+
+		</tbody>
+	</table>
+</div>
+
