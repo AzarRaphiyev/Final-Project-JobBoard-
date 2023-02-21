@@ -1,5 +1,7 @@
 ﻿using JobBoard.Helpers;
+using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace JobBoard.Areas.manage.Controllers
 {
@@ -100,7 +102,11 @@ namespace JobBoard.Areas.manage.Controllers
         {
             ViewBag.PortfolioCatagory = jobBoardContext.poerfolioCatagories.ToList();
             ViewBag.Team = jobBoardContext.JonTeamMembers.ToList();
-            PortfolioItem portfolioItem = jobBoardContext.portfolioItems.Include(x=>x.portfolioItemImages).FirstOrDefault(x => x.Id == id);
+            PortfolioItem portfolioItem = jobBoardContext.portfolioItems.
+                                                                        Include(x=>x.portfolioItemImages)
+                                                                        .Include(x=>x.Team)
+                                                                        .Include(x=>x.poerfolioCatagories)
+                                                                        .FirstOrDefault(x => x.Id == id);
             if (portfolioItem == null) { return View("error"); }
             return View(portfolioItem);
         }
@@ -116,12 +122,13 @@ namespace JobBoard.Areas.manage.Controllers
                                                                    Include(x => x.Team).
                                                                    Include(x => x.poerfolioCatagories).
                                                                    Include(x => x.portfolioItemImages).
-                                                                   FirstOrDefault(x => x.Id == portfolioItem.Id);
+																   FirstOrDefault(x => x.Id == portfolioItem.Id);
             if (ExtItem == null) { return View("error"); }
             if (!ModelState.IsValid)
             {
                 return View();
             }
+
             if (portfolioItem.PosterImageFile != null)
             {
 
@@ -136,49 +143,78 @@ namespace JobBoard.Areas.manage.Controllers
                     ModelState.AddModelError("PosterImageFile", "It cannot be more than 3 MB");
                     return View();
                 }
-                FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", ExtItem.portfolioItemImages.FirstOrDefault(x => x.IsPoster == true).Images);
-                PortfolioItemImages portfolioItemImages = new PortfolioItemImages
+                PortfolioItemImages ImagePoster = jobBoardContext.portfolioItemImages.Where(x => x.IsPoster == true).FirstOrDefault(x => x.PortfolioItemId == ExtItem.Id);
+                FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", ImagePoster.Images);
+                jobBoardContext.portfolioItemImages.Remove(ImagePoster);
+
+                PortfolioItemImages PosteImage = new PortfolioItemImages
                 {
                     PortfolioItemId = portfolioItem.Id,
                     Images = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/portfolio", portfolioItem.PosterImageFile),
                     IsPoster = true,
                 };
-                ExtItem.portfolioItemImages.FirstOrDefault(x => x.IsPoster == true).Images = portfolioItemImages.Images;
-                
+                jobBoardContext.portfolioItemImages.Add(PosteImage);
             }
+
+
             if (portfolioItem.ImageFiles != null)
             {
-                foreach (var ImageFile in portfolioItem.ImageFiles)
+                foreach (var item in portfolioItem.ImageFiles)
                 {
-                    FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", ExtItem.portfolioItemImages.FirstOrDefault(x=>x.IsPoster==null).Images);
-                    if (ImageFile.ContentType != "image/png" && ImageFile.ContentType != "image/jpeg")
+                    if (item.ContentType != "image/png" && item.ContentType != "image/jpeg")
                     {
                         ModelState.AddModelError("PosterImageFile", "But Png, Jpeg and Jpg can be downloaded");
                         return View();
 
                     }
-                    if (ImageFile.Length > 3145728)
+                    if (item.Length > 3145728)
                     {
                         ModelState.AddModelError("PosterImageFile", "It cannot be more than 3 MB");
                         return View();
                     }
-                    PortfolioItemImages portfolioItemImages = new PortfolioItemImages
+					PortfolioItemImages Images = new PortfolioItemImages
                     {
-                        portfolioItem = portfolioItem,
-                        Images = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/portfolio", portfolioItem.PosterImageFile),
-                        IsPoster = null
+                        PortfolioItemId = portfolioItem.Id,
+                        Images = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/portfolio", item),
+                        IsPoster = null,
                     };
-                ExtItem.portfolioItemImages.Add(portfolioItemImages);
+                    jobBoardContext.portfolioItemImages.Add(Images);
                 }
             }
+
+            if (portfolioItem.PortfolioImageIds==null)
+            {
+                List<PortfolioItemImages> images = jobBoardContext.portfolioItemImages.Where(x => x.IsPoster == null).Where(x => x.PortfolioItemId == ExtItem.Id).ToList();
+                foreach (var image in images)
+                {
+                    FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", image.Images);
+                    jobBoardContext.portfolioItemImages.Remove(image);
+                }
+            }
+
+            if (portfolioItem.PortfolioImageIds!=null)
+            {
+                List<PortfolioItemImages> DeletedImage=ExtItem.portfolioItemImages.Where(x=>!portfolioItem.PortfolioImageIds.Contains(x.Id)).ToList();
+                if (DeletedImage!=null)
+                {
+                    foreach (var item in DeletedImage.Where(x=>x.IsPoster==null))
+                    {
+                        PortfolioItemImages Image=jobBoardContext.portfolioItemImages.FirstOrDefault(x=>x.Id==item.Id);
+                        if (Image!=null) { return View("error"); }
+						FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", item.Images);
+						jobBoardContext.portfolioItemImages.Remove(Image);
+					}
+                }
+            }
+
+
             ExtItem.Title = portfolioItem.Title;
             ExtItem.Description = portfolioItem.Description;
-            ExtItem.Team = portfolioItem.Team;
-            ExtItem.Order = portfolioItem.Order;    
-            ExtItem.Client= portfolioItem.Client;
-            ExtItem.YearStarted= portfolioItem.YearStarted;
-            ExtItem.poerfolioCatagories=portfolioItem.poerfolioCatagories;
-            ExtItem.WebUrl=portfolioItem.WebUrl;
+            ExtItem.TeamId = portfolioItem.TeamId;
+            ExtItem.Order = portfolioItem.Order;
+            ExtItem.Client = portfolioItem.Client;
+            ExtItem.poerfolioCatagoriesId = portfolioItem.poerfolioCatagoriesId;
+            ExtItem.WebUrl = portfolioItem.WebUrl;
             jobBoardContext.SaveChanges();
             return RedirectToAction("Index");
         }

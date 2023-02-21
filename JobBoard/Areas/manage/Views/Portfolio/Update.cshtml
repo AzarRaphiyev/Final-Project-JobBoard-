@@ -1,6 +1,6 @@
 ﻿@model PortfolioItem
 @{
-    ViewData["Title"] = "Update";
+	ViewData["Title"] = "Update";
 }
 
 <h1 style="margin-left:40px">Update a Portfolio Item</h1>
@@ -40,6 +40,7 @@
 			</div>
 
 		</div>
+			
 		<div class="row">
 			<div class="mb-3 col-md-12">
 				<label asp-for="Description" class="form-label">Description</label>
@@ -79,14 +80,7 @@
 				<label asp-for="PosterImageFile" class="form-label">Poster Image</label>
 				<input class="form-control" asp-for="PosterImageFile">
 				<span asp-validation-for="PosterImageFile" class="text-danger"></span>
-				@foreach (var item in Model.portfolioItemImages)
-				{
-					if (item.IsPoster==true)
-					{
-						<img style="width:150px;margin-bottom:15px" src="~/uploads/portfolio/@item" />
-						
-					}
-				}
+			   <img style="width:100px;height:100px;margin-top:15px" src="~/uploads/portfolio/@Model.portfolioItemImages.FirstOrDefault(x=>x.IsPoster==true).Images" />
 			</div>
 		</div>
 
@@ -95,14 +89,21 @@
 				<label asp-for="ImageFiles" class="form-label">Image File</label>
 				<input class="form-control" asp-for="ImageFiles" placeholder="Image File">
 				<span asp-validation-for="ImageFiles" class="text-danger"></span>
-				@foreach (var item in Model.portfolioItemImages)
-				{
-					if (item.IsPoster == null)
-					{
-					<img style="width:150px;margin-bottom:15px" src="~/uploads/portfolio/@item" />
 
+				<div class="d-flex " style="flex-wrap:wrap;">
+					@foreach (var item in Model.portfolioItemImages)
+					{
+						if (item.IsPoster == null)
+						{
+							<div style="position:relative;margin-left:30px">
+								<img style="width:100px;height:100px;margin-top:15px" src="~/uploads/portfolio/@item.Images" />
+								<input name="PortfolioImageIds" value="@item.Id" type="hidden"></input>
+								<span style="position:absolute" class="text-danger deleteItemImage"> <i class="bi bi-trash-fill"></i> </span>
+							</div>
+						}
 					}
-				}
+				</div>
+
 			</div>
 		</div>
 

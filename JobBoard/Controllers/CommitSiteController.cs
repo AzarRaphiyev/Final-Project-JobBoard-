@@ -54,7 +54,7 @@ namespace JobBoard.Controllers
                 jobBoardcontext.commentSites.Add(commentSite);
             }
             jobBoardcontext.SaveChanges();
-            return RedirectToAction("index","Home");
+            return RedirectToAction("Create","CommitSite");
         }
 		
     }

@@ -51,6 +51,10 @@ namespace JobBoard.Areas.manage.Controllers
             {
                 return View("error");
             }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             ExtcontactİnfoBar.Address = contactİnfoBar.Address;
             ExtcontactİnfoBar.PhoneNumber = contactİnfoBar.PhoneNumber;
             ExtcontactİnfoBar.Email = contactİnfoBar.Email;

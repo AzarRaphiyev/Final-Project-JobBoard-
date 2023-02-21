@@ -56,7 +56,11 @@ namespace JobBoard.Areas.manage.Controllers
 			{
 				return View("error");
 			}
-			ExtquestionsAndAnswer.Question= questionsAnsver.Question;
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            ExtquestionsAndAnswer.Question= questionsAnsver.Question;
 			ExtquestionsAndAnswer.Answer= questionsAnsver.Answer;
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index");

@@ -43,6 +43,10 @@ namespace JobBoard.Areas.manage.Controllers
         {
             Catagory Exscatagory = jobBoardContext.catagories.FirstOrDefault(x => x.Id == catagory.Id);
             if (Exscatagory == null) return View("Error");
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             Exscatagory.CatagoryName = catagory.CatagoryName;
             jobBoardContext.SaveChanges();
             return RedirectToAction("Index");

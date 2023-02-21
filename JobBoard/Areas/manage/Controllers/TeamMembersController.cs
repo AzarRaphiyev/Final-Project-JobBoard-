@@ -62,6 +62,10 @@ namespace JobBoard.Areas.manage.Controllers
             {
                 return View("Error");
             }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             if (teamMember.ImageFile != null)
             {
                 if (teamMember.ImageFile.ContentType != "image/png" && teamMember.ImageFile.ContentType != "image/jpeg")

@@ -55,6 +55,10 @@ namespace JobBoard.Areas.manage.Controllers
 		{
 			MiniInfoBar ExtsminiInfoBar = jobBoardContext.miniInfoBars.FirstOrDefault(x => x.Id == miniInfoBar.Id);
             if (ExtsminiInfoBar != null) return View("Error");
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             if (miniInfoBar.ImageFile!=null)
             {
 				if (miniInfoBar.ImageFile.ContentType != "image/png" && miniInfoBar.ImageFile.ContentType != "image/jpeg")

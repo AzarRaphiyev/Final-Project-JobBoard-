@@ -53,11 +53,16 @@ namespace JobBoard.Areas.manage.Controllers
 		[HttpPost]
 		public IActionResult Update(Authour authour)
 		{
-			Authour exstAuthour = jobBoardContext.authours.FirstOrDefault(x => x.Id == authour.Id);
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            Authour exstAuthour = jobBoardContext.authours.FirstOrDefault(x => x.Id == authour.Id);
 			if (exstAuthour == null)
 			{
 				return View("Error");
 			}
+
 			if (authour.ImageFile != null)
 			{
 				if (authour.ImageFile.ContentType != "image/png" && authour.ImageFile.ContentType != "image/jpeg")

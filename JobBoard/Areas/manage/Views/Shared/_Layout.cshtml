@@ -1,6 +1,10 @@
 ﻿@inject JobBoard.Areas.manage.services.AdminLayoutService services
 @{
-    AppUser user = await services.GetUser();
+    AppUser user = null;
+    if (User.Identity.IsAuthenticated)
+    {
+        user = await services.GetUser();
+    }
     List<Company> companies = services.GetCompanies();
     List<Contact> contacts = services.GetContacts();
     int companiescount = 0;
@@ -105,6 +109,10 @@
                         <h6 class="collapse-header">Questions Section Cruds:</h6>
                         <a class="collapse-item" asp-action="Index" asp-controller="QuestionsAndAnswer">Questions And Answer</a>
                         <a class="collapse-item" asp-action="Index" asp-controller="QuestionsSectionImage">Questions Section Image</a> 
+                        <h6 class="collapse-header">Job Section Cruds:</h6>
+                        <a class="collapse-item" asp-action="Index" asp-controller="JobType">Job Type</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Region">Job Region</a> 
+                        <a class="collapse-item" asp-action="Index" asp-controller="Gender">Gender</a> 
 
                     </div>
                 </div>
@@ -281,14 +289,14 @@
 
 
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
+                        <li class="nav-item dropdown no-arrow">`
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                @if (User.Identity.IsAuthenticated)
                                 {
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">@user.FullName</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">@user?.FullName</span>
                                 <img class="img-profile rounded-circle"
-                                     src="~/manage/img/@user.Image">
+                                     src="~/manage/img/@user?.Image">
                                 }
                             </a>
                             <!-- Dropdown - User Information -->
@@ -371,6 +379,7 @@
 
     <!-- Page level custom scripts -->
     <script src="~/manage/js/demo/chart-area-demo.js"></script>
+    <script src="~/manage/js/main.js"></script>
     <script src="~/manage/js/demo/chart-pie-demo.js"></script>
 
 </body>

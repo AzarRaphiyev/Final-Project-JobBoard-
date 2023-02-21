@@ -8,6 +8,7 @@ namespace JobBoard.Helpers
 		{
 			string name = image.FileName;
 			name = (name.Length > 64) ? name.Substring(name.Length - 64, 64) : name;
+			name = Guid.NewGuid().ToString() + name;
 			string savePath = Path.Combine(root, filename, name);
 			using (FileStream fileStream = new FileStream(savePath, FileMode.Create))
 			{

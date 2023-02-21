@@ -54,6 +54,10 @@ namespace JobBoard.Areas.manage.Controllers
             {
                 return View("error");
             }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             ExtservicesSite.Name = service.Name;
             ExtservicesSite.Description = service.Description;
             ExtservicesSite.Icon = service.Icon;

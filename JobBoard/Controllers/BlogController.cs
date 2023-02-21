@@ -80,7 +80,9 @@ namespace JobBoard.Controllers
             jobBoardContext.commentBlogs.Add(commentBlog);
             jobBoardContext.SaveChanges();
             
-            return View(blogDitelsViewModel);
+            //return View(blogDitelsViewModel);
+
+            return RedirectToAction("Details","Blog",blogDitelsViewModel);
 		}
     }
 }

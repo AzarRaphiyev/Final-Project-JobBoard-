@@ -60,7 +60,11 @@ namespace JobBoard.Areas.manage.Controllers
 			if (questionsSectionImage==null) { return View("error"); }
 			QuestionsSectionImage extQuestionsSectionImage=jobBoardContext.questionsSectionImages.FirstOrDefault(x=>x.Id== questionsSectionImage.Id);
 			if (extQuestionsSectionImage==null) { return View("error"); }
-			if (questionsSectionImage.ImageFile != null)
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            if (questionsSectionImage.ImageFile != null)
 			{
 				if (questionsSectionImage.ImageFile.ContentType != "image/png" && questionsSectionImage.ImageFile.ContentType != "image/jpeg")
 				{

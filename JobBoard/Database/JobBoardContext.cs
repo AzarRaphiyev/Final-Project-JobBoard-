@@ -27,5 +27,8 @@ namespace JobBoard.Database
 		public DbSet<PoerfolioCatagory> poerfolioCatagories { get; set; }
 		public DbSet<PortfolioItem> portfolioItems { get; set; }
 		public DbSet<PortfolioItemImages> portfolioItemImages { get; set; }
+		public DbSet<JobRegion> Regions { get; set; }
+		public DbSet<Gender> genders { get; set; }
+		public DbSet<Job> Jobs { get; set; }
 	}
 }

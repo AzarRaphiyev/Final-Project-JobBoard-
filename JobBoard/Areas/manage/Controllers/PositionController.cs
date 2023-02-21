@@ -42,7 +42,11 @@ namespace JobBoard.Areas.manage.Controllers
 		{
 			Position ExsPostion = jobBoardContext.positions.FirstOrDefault(x=> x.id==position.id);
 			if (ExsPostion == null) return View("Error");
-			ExsPostion.Jobname=position.Jobname;
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            ExsPostion.Jobname=position.Jobname;
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index");
 		}

@@ -67,7 +67,7 @@
                                 <form method="post" class="">
                                     <div class="form-group">
                                         <label asp-for="CommentDescription">Message</label>
-                                     <textarea asp-for="CommentDescription" cols="30" rows="10" class="form-control"></textarea>
+                                     <textarea asp-for="CommentDescription" cols="30" rows="10" class="comment-text form-control"></textarea>
                                      <span asp-validation-for="CommentDescription" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
@@ -78,7 +78,10 @@
                                 }
                                 else
                                 {
-                                        <input type="submit" value="Post Comment"  class="btn btn-primary btn-md">
+                                    <a asp-action="details" asp-controller="blog" class="comment-submit btn btn-primary btn-md">Submit</a>
+                                       @* <input  type="submit" value="Post Comment"  class="comment-submit btn btn-primary btn-md">*@
+
+                                       <button  type="submit" value="Post Comment"  class="comment-submit btn btn-primary btn-md"> Submit</button>
                                 }
                                     </div>
                                 </form>

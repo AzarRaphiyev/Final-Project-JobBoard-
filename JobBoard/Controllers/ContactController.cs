@@ -37,7 +37,7 @@ namespace JobBoard.Controllers
 			contact.Data = DateTime.Now;
 			jobBoardContext.Contacts.Add(contact);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("Index","home");
+			return RedirectToAction("Create","Contact");
 		}
 	}
 }

@@ -25,12 +25,14 @@
 		public List<PortfolioItemImages>? portfolioItemImages { get; set; }
 
 		[NotMapped]
-		public List<IFormFile> ImageFiles { get; set; }
+		public List<IFormFile>? ImageFiles { get; set; }
 
 		[NotMapped]
-		public IFormFile PosterImageFile { get; set; }
+		public IFormFile? PosterImageFile { get; set; }
 		public Team? Team { get; set; }
 		public PoerfolioCatagory? poerfolioCatagories { get; set; }
+		[NotMapped]
+		public List<int>? PortfolioImageIds { get; set; }
 
 
 	}

@@ -42,7 +42,11 @@ namespace JobBoard.Areas.manage.Controllers
 		{
 			PoerfolioCatagory Exscatagory = jobBoardContext.poerfolioCatagories.FirstOrDefault(x => x.Id == catagory.Id);
 			if (Exscatagory == null) return View("Error");
-			Exscatagory.Name = catagory.Name;
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            Exscatagory.Name = catagory.Name;
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index");
 		}

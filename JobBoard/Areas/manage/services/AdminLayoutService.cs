@@ -7,7 +7,7 @@
         private readonly JobBoardContext jobBoardContext;
 
         public AdminLayoutService(UserManager<AppUser> userManager, IHttpContextAccessor httpContextAccessor,JobBoardContext jobBoardContext)
-        {
+         {
             this.userManager = userManager;
             this.httpContextAccessor = httpContextAccessor;
             this.jobBoardContext = jobBoardContext;
