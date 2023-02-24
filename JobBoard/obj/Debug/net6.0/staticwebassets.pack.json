@@ -7813,16 +7813,20 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\ul images encapsulate what freedom means to 50 photographers.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\42ea1e8d-5ae8-41ff-9c75-316384385e8e990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\commentsite\\42ea1e8d-5ae8-41ff-9c75-316384385e8e990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
-    },
-    {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\7daa9b50-8a46-493f-849b-0d4c40c2237cside profile.jpg",
-      "PackagePath": "staticwebassets\\uploads\\commentsite\\7daa9b50-8a46-493f-849b-0d4c40c2237cside profile.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg",
+      "PackagePath": "staticwebassets\\uploads\\commentsite\\3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\side profile.jpg",
       "PackagePath": "staticwebassets\\uploads\\commentsite\\side profile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\job\\63be596b-ac0d-4ccd-9556-9d959a84c1fastrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png",
+      "PackagePath": "staticwebassets\\uploads\\job\\63be596b-ac0d-4ccd-9556-9d959a84c1fastrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\job\\8145e4b1-f919-46bb-b282-9f69a449dea4batMobile.jpg",
+      "PackagePath": "staticwebassets\\uploads\\job\\8145e4b1-f919-46bb-b282-9f69a449dea4batMobile.jpg"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\job\\b8bec3f3-dd3c-44ba-b0ef-b348831ba7e6990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
@@ -7833,6 +7837,10 @@
       "PackagePath": "staticwebassets\\uploads\\member\\Warm Neutrals Modern Simple Resume.pdf"
     },
     {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\cv\\50d364b6-511c-48b0-89d4-d2145aa5bbe8Cv.pdf",
+      "PackagePath": "staticwebassets\\uploads\\member\\cv\\50d364b6-511c-48b0-89d4-d2145aa5bbe8Cv.pdf"
+    },
+    {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\cv\\Warm Neutrals Modern Simple Resume.pdf",
       "PackagePath": "staticwebassets\\uploads\\member\\cv\\Warm Neutrals Modern Simple Resume.pdf"
     },
@@ -7841,128 +7849,136 @@
       "PackagePath": "staticwebassets\\uploads\\member\\cv\\Голубой и Черный Академическое Резюме.pdf"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\member\\img\\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\025fa2e2-f42b-4a55-bf3e-30ed5cad141bny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\025fa2e2-f42b-4a55-bf3e-30ed5cad141bny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg",
-      "PackagePath": "staticwebassets\\uploads\\member\\img\\b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\042f2904-071c-40a2-9562-65ff703f65edric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\042f2904-071c-40a2-9562-65ff703f65edric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\default-profile.png",
-      "PackagePath": "staticwebassets\\uploads\\member\\img\\default-profile.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\1706f785-7cae-427b-86bb-d2eb40a07895616a7d4de092f0de3d02b4729fce639e - Kopya.jpg",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\1706f785-7cae-427b-86bb-d2eb40a07895616a7d4de092f0de3d02b4729fce639e - Kopya.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\member\\img\\vyv230a66nq52bav0m198uy1u07hz3uz.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\member\\img\\vyv230a66nq52bav0m198uy1u07hz3uz.jpeg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\193bee72-bc2f-417c-b19b-5d067c1ae203strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\193bee72-bc2f-417c-b19b-5d067c1ae203strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\035f026e-f2a0-44d5-b91c-c8f8b14805d9Roger Alves - Pinterest – SAVEE.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\035f026e-f2a0-44d5-b91c-c8f8b14805d9Roger Alves - Pinterest – SAVEE.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\31120381-379b-446f-bac1-1214d1858c2dstrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\31120381-379b-446f-bac1-1214d1858c2dstrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\0a4c8d52-c8da-4506-85c9-7a67b681027a616a7d4de092f0de3d02b4729fce639e - Kopya.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\0a4c8d52-c8da-4506-85c9-7a67b681027a616a7d4de092f0de3d02b4729fce639e - Kopya.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\3bfed9b9-dba4-4b61-aab4-2d59a1f96da2d vintage music, records, collection, photo idea, gramophone.jpg",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\3bfed9b9-dba4-4b61-aab4-2d59a1f96da2d vintage music, records, collection, photo idea, gramophone.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\0dacf289-3556-41bd-8e07-96a0f5d326e9990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\0dacf289-3556-41bd-8e07-96a0f5d326e9990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\4136403c-d379-43be-a939-bb4bc30a99c2ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\4136403c-d379-43be-a939-bb4bc30a99c2ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\1721ce5a-aba4-4452-837e-5dbb7e94e1eca Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\1721ce5a-aba4-4452-837e-5dbb7e94e1eca Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\4862703f-4530-4a36-aa3d-dec913adcd44616a7d4de092f0de3d02b4729fce639e - Kopya.jpg",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\4862703f-4530-4a36-aa3d-dec913adcd44616a7d4de092f0de3d02b4729fce639e - Kopya.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\1c40acbd-5043-4ba4-b2af-be499e9cb722616a7d4de092f0de3d02b4729fce639e.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\1c40acbd-5043-4ba4-b2af-be499e9cb722616a7d4de092f0de3d02b4729fce639e.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\4b7ccbb6-ee7e-4c67-bf6d-1587d10dca35ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\4b7ccbb6-ee7e-4c67-bf6d-1587d10dca35ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\1f9cd80f-073b-4177-89d6-81f6c1132512a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\1f9cd80f-073b-4177-89d6-81f6c1132512a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\73e3e2c0-25b4-4587-bd4e-d676553f5d85ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\73e3e2c0-25b4-4587-bd4e-d676553f5d85ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\341c7b61-40eb-4f12-8412-a4456a113653a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\341c7b61-40eb-4f12-8412-a4456a113653a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\7960eb31-5c1a-46ca-ac1a-9b55ac77e5a3ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\7960eb31-5c1a-46ca-ac1a-9b55ac77e5a3ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\3ab15f59-82fc-40cd-8571-bf9c46bd0eb8side profile.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\3ab15f59-82fc-40cd-8571-bf9c46bd0eb8side profile.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\95135f66-25c0-4395-a09a-4d7fa0e9792a990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\95135f66-25c0-4395-a09a-4d7fa0e9792a990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\42308dab-83b7-4aef-9e89-1403497fcfacb829e7f9-bfe8-4459-8a09-f303cf093d72.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\42308dab-83b7-4aef-9e89-1403497fcfacb829e7f9-bfe8-4459-8a09-f303cf093d72.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\a2587ef1-54d3-4621-8c11-a7d035baef11Roger Alves - Pinterest – SAVEE.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\a2587ef1-54d3-4621-8c11-a7d035baef11Roger Alves - Pinterest – SAVEE.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\4485c8b5-1ced-4a21-b7aa-2e00221c6614a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\4485c8b5-1ced-4a21-b7aa-2e00221c6614a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\a3d11cb3-c5f0-4608-a634-1bcfc300795eric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\a3d11cb3-c5f0-4608-a634-1bcfc300795eric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\49fbe449-b0a5-446a-b0c5-cfa1abe9e41car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\49fbe449-b0a5-446a-b0c5-cfa1abe9e41car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\ba91bae7-0a6c-4845-a2de-ab90c2391619990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\ba91bae7-0a6c-4845-a2de-ab90c2391619990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\4da97c8c-df64-482a-a1b7-ecfad1e138dd616a7d4de092f0de3d02b4729fce639e.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\4da97c8c-df64-482a-a1b7-ecfad1e138dd616a7d4de092f0de3d02b4729fce639e.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\bb1a500b-c530-4c13-898e-76ab00b7d08dd vintage music, records, collection, photo idea, gramophone.jpg",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\bb1a500b-c530-4c13-898e-76ab00b7d08dd vintage music, records, collection, photo idea, gramophone.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\52504819-009f-4e83-a2c4-d4a2f030a27bRoger Alves - Pinterest – SAVEE.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\52504819-009f-4e83-a2c4-d4a2f030a27bRoger Alves - Pinterest – SAVEE.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\c2a78f5e-1835-49eb-b4d2-4ec140acffd1a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\c2a78f5e-1835-49eb-b4d2-4ec140acffd1a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\5993a338-e5af-4a5b-b735-2373ddfe5400default-profile.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\5993a338-e5af-4a5b-b735-2373ddfe5400default-profile.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\cb4b6f5c-92f9-429b-8912-675adafd861aRoger Alves - Pinterest – SAVEE.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\cb4b6f5c-92f9-429b-8912-675adafd861aRoger Alves - Pinterest – SAVEE.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\5b64af8a-051e-46af-8aa3-c2a826b41629616a7d4de092f0de3d02b4729fce639e - Kopya.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\5b64af8a-051e-46af-8aa3-c2a826b41629616a7d4de092f0de3d02b4729fce639e - Kopya.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\d3b3d598-01bb-44a8-aa3d-47f4ba46cc17strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\d3b3d598-01bb-44a8-aa3d-47f4ba46cc17strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\5d2d8507-6e30-4bdf-b155-a46102c2ab73990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\5d2d8507-6e30-4bdf-b155-a46102c2ab73990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\d54d58a3-9c66-4771-bc79-86d88392ea82a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\d54d58a3-9c66-4771-bc79-86d88392ea82a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\6da8603e-3203-4b59-ace8-aad16af24602d vintage music, records, collection, photo idea, gramophone.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\6da8603e-3203-4b59-ace8-aad16af24602d vintage music, records, collection, photo idea, gramophone.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\d574285c-4da0-4e25-8cdb-fb74418bfc51ric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\d574285c-4da0-4e25-8cdb-fb74418bfc51ric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\7fc24515-32f3-45e2-a80a-fb3e6828debd990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\7fc24515-32f3-45e2-a80a-fb3e6828debd990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\e4313938-caa4-4ca6-844c-2cf32c4d1a12990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\e4313938-caa4-4ca6-844c-2cf32c4d1a12990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\824dfaa1-6454-42f7-b3b4-99f7e97d0204Roger Alves - Pinterest – SAVEE.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\824dfaa1-6454-42f7-b3b4-99f7e97d0204Roger Alves - Pinterest – SAVEE.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\e8e445c0-556e-4279-8276-171284df5546Roger Alves - Pinterest – SAVEE.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\e8e445c0-556e-4279-8276-171284df5546Roger Alves - Pinterest – SAVEE.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\955c5d8d-f45a-4708-8e8a-d0514ce4627aar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\955c5d8d-f45a-4708-8e8a-d0514ce4627aar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\f3497c24-a914-4623-9499-698e3480c969strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png",
+      "PackagePath": "staticwebassets\\uploads\\portfolio\\f3497c24-a914-4623-9499-698e3480c969strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\984711a4-18e2-4df7-ab56-71285910d328a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\984711a4-18e2-4df7-ab56-71285910d328a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\reklam\\8b91b1a8-3255-4815-9aa4-1754b83081c8pizza.jpg",
+      "PackagePath": "staticwebassets\\uploads\\reklam\\8b91b1a8-3255-4815-9aa4-1754b83081c8pizza.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\999d584d-cda5-4e46-8a7b-e2f6b0d7c4eba Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\999d584d-cda5-4e46-8a7b-e2f6b0d7c4eba Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\reklam\\b9a6b090-369f-4889-8165-9c377ae402b4pepsi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\reklam\\b9a6b090-369f-4889-8165-9c377ae402b4pepsi.jpg"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\9dee4340-611d-43f7-adec-3a551689fa63d vintage music, records, collection, photo idea, gramophone.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\9dee4340-611d-43f7-adec-3a551689fa63d vintage music, records, collection, photo idea, gramophone.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\2795a502-489f-41f7-8bba-55949a288d44ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\2795a502-489f-41f7-8bba-55949a288d44ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\a27d0ab6-bab7-462e-b4cb-f9908f8f2850Roger Alves - Pinterest – SAVEE.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\a27d0ab6-bab7-462e-b4cb-f9908f8f2850Roger Alves - Pinterest – SAVEE.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\393f9a75-b1b7-4e79-b355-41d1a772694astrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\393f9a75-b1b7-4e79-b355-41d1a772694astrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\b753a224-2140-402d-ad5e-318c7fe04e54990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\b753a224-2140-402d-ad5e-318c7fe04e54990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\3c5d9439-3c5d-46fc-b89d-5723bb07801apngwing.com (1).png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\3c5d9439-3c5d-46fc-b89d-5723bb07801apngwing.com (1).png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\c76617eb-9ae3-434a-ae30-ef8c17905fcda Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\c76617eb-9ae3-434a-ae30-ef8c17905fcda Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\4df42a61-65be-4f08-a524-d0f47982c1b1ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\4df42a61-65be-4f08-a524-d0f47982c1b1ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\portfolio\\e897882a-c7bf-467d-ace2-f0bd5646e00dar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png",
-      "PackagePath": "staticwebassets\\uploads\\portfolio\\e897882a-c7bf-467d-ace2-f0bd5646e00dar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\6c5cc8b6-da23-4522-b00d-7a75b7687edcric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\6c5cc8b6-da23-4522-b00d-7a75b7687edcric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\c8c364d4-52bc-4094-92d1-f92273e81169pngwing.com (1).png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\c8c364d4-52bc-4094-92d1-f92273e81169pngwing.com (1).png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\supports\\d2da66c8-9618-4f51-b4eb-97887cede20d990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
+      "PackagePath": "staticwebassets\\uploads\\supports\\d2da66c8-9618-4f51-b4eb-97887cede20d990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\team\\IMG_20220929_215928.jpg",
@@ -7977,12 +7993,20 @@
       "PackagePath": "staticwebassets\\uploads\\team\\hazırlanacaq.png"
     },
     {
-      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
-      "PackagePath": "staticwebassets\\uploads\\users\\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\8297a867-ad0e-4c1c-99d3-df82abc2e885s-l400.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\8297a867-ad0e-4c1c-99d3-df82abc2e885s-l400.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\ce162f4e-e615-436b-84bc-89267f913575s-l400.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\ce162f4e-e615-436b-84bc-89267f913575s-l400.jpg"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\default-profile.png",
       "PackagePath": "staticwebassets\\uploads\\users\\default-profile.png"
+    },
+    {
+      "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\f1ba309a-98fe-4e00-9f95-7e82004158bf990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
+      "PackagePath": "staticwebassets\\uploads\\users\\f1ba309a-98fe-4e00-9f95-7e82004158bf990f5fbc-2cb8-40d9-89e6-d4602717fb03.png"
     },
     {
       "Id": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\users\\flying_car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2.png",

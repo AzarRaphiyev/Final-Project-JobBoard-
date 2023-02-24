@@ -93,7 +93,7 @@ namespace JobBoard.Areas.manage.Controllers
 			jobBoardContext.authours.Remove(authour);
 			jobBoardContext.SaveChanges();
 
-			return RedirectToAction("index");
+			return Ok();
 		}
 	}
 }

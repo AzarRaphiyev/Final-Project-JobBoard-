@@ -31200,12 +31200,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\ul images encapsulate what freedom means to 50 photographers.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\42ea1e8d-5ae8-41ff-9c75-316384385e8e990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/commentsite/42ea1e8d-5ae8-41ff-9c75-316384385e8e990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <RelativePath>uploads/commentsite/3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31214,23 +31214,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\42ea1e8d-5ae8-41ff-9c75-316384385e8e990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\7daa9b50-8a46-493f-849b-0d4c40c2237cside profile.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/commentsite/7daa9b50-8a46-493f-849b-0d4c40c2237cside profile.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\7daa9b50-8a46-493f-849b-0d4c40c2237cside profile.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\side profile.jpg))">
       <SourceType>Package</SourceType>
@@ -31248,6 +31232,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\side profile.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\63be596b-ac0d-4ccd-9556-9d959a84c1fastrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/job/63be596b-ac0d-4ccd-9556-9d959a84c1fastrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\63be596b-ac0d-4ccd-9556-9d959a84c1fastrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\8145e4b1-f919-46bb-b282-9f69a449dea4batMobile.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/job/8145e4b1-f919-46bb-b282-9f69a449dea4batMobile.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\8145e4b1-f919-46bb-b282-9f69a449dea4batMobile.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\b8bec3f3-dd3c-44ba-b0ef-b348831ba7e6990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
@@ -31263,6 +31279,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\b8bec3f3-dd3c-44ba-b0ef-b348831ba7e6990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\cv\50d364b6-511c-48b0-89d4-d2145aa5bbe8Cv.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/member/cv/50d364b6-511c-48b0-89d4-d2145aa5bbe8Cv.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\cv\50d364b6-511c-48b0-89d4-d2145aa5bbe8Cv.pdf))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\cv\Warm Neutrals Modern Simple Resume.pdf))">
       <SourceType>Package</SourceType>
@@ -31295,70 +31327,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\cv\Голубой и Черный Академическое Резюме.pdf))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/member/img/990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/member/img/b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\b829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\default-profile.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/member/img/default-profile.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\default-profile.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\vyv230a66nq52bav0m198uy1u07hz3uz.jpeg))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/member/img/vyv230a66nq52bav0m198uy1u07hz3uz.jpeg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\img\vyv230a66nq52bav0m198uy1u07hz3uz.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\member\Warm Neutrals Modern Simple Resume.pdf))">
       <SourceType>Package</SourceType>
@@ -31408,12 +31376,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\MiniInfoBar\sq_img_8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\035f026e-f2a0-44d5-b91c-c8f8b14805d9Roger Alves - Pinterest – SAVEE.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\025fa2e2-f42b-4a55-bf3e-30ed5cad141bny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/035f026e-f2a0-44d5-b91c-c8f8b14805d9Roger Alves - Pinterest – SAVEE.png</RelativePath>
+      <RelativePath>uploads/portfolio/025fa2e2-f42b-4a55-bf3e-30ed5cad141bny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31422,14 +31390,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\035f026e-f2a0-44d5-b91c-c8f8b14805d9Roger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\025fa2e2-f42b-4a55-bf3e-30ed5cad141bny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\0a4c8d52-c8da-4506-85c9-7a67b681027a616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\042f2904-071c-40a2-9562-65ff703f65edric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/0a4c8d52-c8da-4506-85c9-7a67b681027a616a7d4de092f0de3d02b4729fce639e - Kopya.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/042f2904-071c-40a2-9562-65ff703f65edric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31438,14 +31406,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\0a4c8d52-c8da-4506-85c9-7a67b681027a616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\042f2904-071c-40a2-9562-65ff703f65edric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\0dacf289-3556-41bd-8e07-96a0f5d326e9990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1706f785-7cae-427b-86bb-d2eb40a07895616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/0dacf289-3556-41bd-8e07-96a0f5d326e9990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <RelativePath>uploads/portfolio/1706f785-7cae-427b-86bb-d2eb40a07895616a7d4de092f0de3d02b4729fce639e - Kopya.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31454,14 +31422,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\0dacf289-3556-41bd-8e07-96a0f5d326e9990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1706f785-7cae-427b-86bb-d2eb40a07895616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1721ce5a-aba4-4452-837e-5dbb7e94e1eca Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\193bee72-bc2f-417c-b19b-5d067c1ae203strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/1721ce5a-aba4-4452-837e-5dbb7e94e1eca Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/193bee72-bc2f-417c-b19b-5d067c1ae203strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31470,14 +31438,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1721ce5a-aba4-4452-837e-5dbb7e94e1eca Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\193bee72-bc2f-417c-b19b-5d067c1ae203strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1c40acbd-5043-4ba4-b2af-be499e9cb722616a7d4de092f0de3d02b4729fce639e.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\31120381-379b-446f-bac1-1214d1858c2dstrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/1c40acbd-5043-4ba4-b2af-be499e9cb722616a7d4de092f0de3d02b4729fce639e.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/31120381-379b-446f-bac1-1214d1858c2dstrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31486,14 +31454,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1c40acbd-5043-4ba4-b2af-be499e9cb722616a7d4de092f0de3d02b4729fce639e.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\31120381-379b-446f-bac1-1214d1858c2dstrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1f9cd80f-073b-4177-89d6-81f6c1132512a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\3bfed9b9-dba4-4b61-aab4-2d59a1f96da2d vintage music, records, collection, photo idea, gramophone.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/1f9cd80f-073b-4177-89d6-81f6c1132512a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/3bfed9b9-dba4-4b61-aab4-2d59a1f96da2d vintage music, records, collection, photo idea, gramophone.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31502,14 +31470,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\1f9cd80f-073b-4177-89d6-81f6c1132512a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\3bfed9b9-dba4-4b61-aab4-2d59a1f96da2d vintage music, records, collection, photo idea, gramophone.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\341c7b61-40eb-4f12-8412-a4456a113653a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4136403c-d379-43be-a939-bb4bc30a99c2ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/341c7b61-40eb-4f12-8412-a4456a113653a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/4136403c-d379-43be-a939-bb4bc30a99c2ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31518,14 +31486,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\341c7b61-40eb-4f12-8412-a4456a113653a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4136403c-d379-43be-a939-bb4bc30a99c2ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\3ab15f59-82fc-40cd-8571-bf9c46bd0eb8side profile.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4862703f-4530-4a36-aa3d-dec913adcd44616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/3ab15f59-82fc-40cd-8571-bf9c46bd0eb8side profile.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/4862703f-4530-4a36-aa3d-dec913adcd44616a7d4de092f0de3d02b4729fce639e - Kopya.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31534,14 +31502,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\3ab15f59-82fc-40cd-8571-bf9c46bd0eb8side profile.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4862703f-4530-4a36-aa3d-dec913adcd44616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\42308dab-83b7-4aef-9e89-1403497fcfacb829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4b7ccbb6-ee7e-4c67-bf6d-1587d10dca35ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/42308dab-83b7-4aef-9e89-1403497fcfacb829e7f9-bfe8-4459-8a09-f303cf093d72.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/4b7ccbb6-ee7e-4c67-bf6d-1587d10dca35ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31550,14 +31518,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\42308dab-83b7-4aef-9e89-1403497fcfacb829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4b7ccbb6-ee7e-4c67-bf6d-1587d10dca35ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4485c8b5-1ced-4a21-b7aa-2e00221c6614a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\73e3e2c0-25b4-4587-bd4e-d676553f5d85ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/4485c8b5-1ced-4a21-b7aa-2e00221c6614a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/73e3e2c0-25b4-4587-bd4e-d676553f5d85ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31566,14 +31534,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4485c8b5-1ced-4a21-b7aa-2e00221c6614a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\73e3e2c0-25b4-4587-bd4e-d676553f5d85ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\49fbe449-b0a5-446a-b0c5-cfa1abe9e41car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\7960eb31-5c1a-46ca-ac1a-9b55ac77e5a3ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/49fbe449-b0a5-446a-b0c5-cfa1abe9e41car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png</RelativePath>
+      <RelativePath>uploads/portfolio/7960eb31-5c1a-46ca-ac1a-9b55ac77e5a3ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31582,14 +31550,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\49fbe449-b0a5-446a-b0c5-cfa1abe9e41car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\7960eb31-5c1a-46ca-ac1a-9b55ac77e5a3ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4da97c8c-df64-482a-a1b7-ecfad1e138dd616a7d4de092f0de3d02b4729fce639e.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\95135f66-25c0-4395-a09a-4d7fa0e9792a990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/4da97c8c-df64-482a-a1b7-ecfad1e138dd616a7d4de092f0de3d02b4729fce639e.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/95135f66-25c0-4395-a09a-4d7fa0e9792a990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31598,14 +31566,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\4da97c8c-df64-482a-a1b7-ecfad1e138dd616a7d4de092f0de3d02b4729fce639e.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\95135f66-25c0-4395-a09a-4d7fa0e9792a990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\52504819-009f-4e83-a2c4-d4a2f030a27bRoger Alves - Pinterest – SAVEE.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\a2587ef1-54d3-4621-8c11-a7d035baef11Roger Alves - Pinterest – SAVEE.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/52504819-009f-4e83-a2c4-d4a2f030a27bRoger Alves - Pinterest – SAVEE.png</RelativePath>
+      <RelativePath>uploads/portfolio/a2587ef1-54d3-4621-8c11-a7d035baef11Roger Alves - Pinterest – SAVEE.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31614,14 +31582,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\52504819-009f-4e83-a2c4-d4a2f030a27bRoger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\a2587ef1-54d3-4621-8c11-a7d035baef11Roger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\5993a338-e5af-4a5b-b735-2373ddfe5400default-profile.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\a3d11cb3-c5f0-4608-a634-1bcfc300795eric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/5993a338-e5af-4a5b-b735-2373ddfe5400default-profile.png</RelativePath>
+      <RelativePath>uploads/portfolio/a3d11cb3-c5f0-4608-a634-1bcfc300795eric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31630,14 +31598,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\5993a338-e5af-4a5b-b735-2373ddfe5400default-profile.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\a3d11cb3-c5f0-4608-a634-1bcfc300795eric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\5b64af8a-051e-46af-8aa3-c2a826b41629616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\ba91bae7-0a6c-4845-a2de-ab90c2391619990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/5b64af8a-051e-46af-8aa3-c2a826b41629616a7d4de092f0de3d02b4729fce639e - Kopya.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/ba91bae7-0a6c-4845-a2de-ab90c2391619990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31646,14 +31614,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\5b64af8a-051e-46af-8aa3-c2a826b41629616a7d4de092f0de3d02b4729fce639e - Kopya.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\ba91bae7-0a6c-4845-a2de-ab90c2391619990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\5d2d8507-6e30-4bdf-b155-a46102c2ab73990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\bb1a500b-c530-4c13-898e-76ab00b7d08dd vintage music, records, collection, photo idea, gramophone.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/5d2d8507-6e30-4bdf-b155-a46102c2ab73990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <RelativePath>uploads/portfolio/bb1a500b-c530-4c13-898e-76ab00b7d08dd vintage music, records, collection, photo idea, gramophone.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31662,14 +31630,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\5d2d8507-6e30-4bdf-b155-a46102c2ab73990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\bb1a500b-c530-4c13-898e-76ab00b7d08dd vintage music, records, collection, photo idea, gramophone.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\6da8603e-3203-4b59-ace8-aad16af24602d vintage music, records, collection, photo idea, gramophone.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\c2a78f5e-1835-49eb-b4d2-4ec140acffd1a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/6da8603e-3203-4b59-ace8-aad16af24602d vintage music, records, collection, photo idea, gramophone.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/c2a78f5e-1835-49eb-b4d2-4ec140acffd1a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31678,14 +31646,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\6da8603e-3203-4b59-ace8-aad16af24602d vintage music, records, collection, photo idea, gramophone.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\c2a78f5e-1835-49eb-b4d2-4ec140acffd1a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\7fc24515-32f3-45e2-a80a-fb3e6828debd990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\cb4b6f5c-92f9-429b-8912-675adafd861aRoger Alves - Pinterest – SAVEE.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/7fc24515-32f3-45e2-a80a-fb3e6828debd990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <RelativePath>uploads/portfolio/cb4b6f5c-92f9-429b-8912-675adafd861aRoger Alves - Pinterest – SAVEE.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31694,14 +31662,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\7fc24515-32f3-45e2-a80a-fb3e6828debd990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\cb4b6f5c-92f9-429b-8912-675adafd861aRoger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\824dfaa1-6454-42f7-b3b4-99f7e97d0204Roger Alves - Pinterest – SAVEE.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\d3b3d598-01bb-44a8-aa3d-47f4ba46cc17strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/824dfaa1-6454-42f7-b3b4-99f7e97d0204Roger Alves - Pinterest – SAVEE.png</RelativePath>
+      <RelativePath>uploads/portfolio/d3b3d598-01bb-44a8-aa3d-47f4ba46cc17strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31710,14 +31678,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\824dfaa1-6454-42f7-b3b4-99f7e97d0204Roger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\d3b3d598-01bb-44a8-aa3d-47f4ba46cc17strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\955c5d8d-f45a-4708-8e8a-d0514ce4627aar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\d54d58a3-9c66-4771-bc79-86d88392ea82a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/955c5d8d-f45a-4708-8e8a-d0514ce4627aar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png</RelativePath>
+      <RelativePath>uploads/portfolio/d54d58a3-9c66-4771-bc79-86d88392ea82a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31726,14 +31694,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\955c5d8d-f45a-4708-8e8a-d0514ce4627aar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\d54d58a3-9c66-4771-bc79-86d88392ea82a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\984711a4-18e2-4df7-ab56-71285910d328a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\d574285c-4da0-4e25-8cdb-fb74418bfc51ric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/984711a4-18e2-4df7-ab56-71285910d328a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/d574285c-4da0-4e25-8cdb-fb74418bfc51ric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31742,14 +31710,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\984711a4-18e2-4df7-ab56-71285910d328a Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\d574285c-4da0-4e25-8cdb-fb74418bfc51ric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\999d584d-cda5-4e46-8a7b-e2f6b0d7c4eba Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\e4313938-caa4-4ca6-844c-2cf32c4d1a12990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/999d584d-cda5-4e46-8a7b-e2f6b0d7c4eba Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/e4313938-caa4-4ca6-844c-2cf32c4d1a12990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31758,14 +31726,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\999d584d-cda5-4e46-8a7b-e2f6b0d7c4eba Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\e4313938-caa4-4ca6-844c-2cf32c4d1a12990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\9dee4340-611d-43f7-adec-3a551689fa63d vintage music, records, collection, photo idea, gramophone.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\e8e445c0-556e-4279-8276-171284df5546Roger Alves - Pinterest – SAVEE.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/9dee4340-611d-43f7-adec-3a551689fa63d vintage music, records, collection, photo idea, gramophone.jpg</RelativePath>
+      <RelativePath>uploads/portfolio/e8e445c0-556e-4279-8276-171284df5546Roger Alves - Pinterest – SAVEE.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31774,14 +31742,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\9dee4340-611d-43f7-adec-3a551689fa63d vintage music, records, collection, photo idea, gramophone.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\e8e445c0-556e-4279-8276-171284df5546Roger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\a27d0ab6-bab7-462e-b4cb-f9908f8f2850Roger Alves - Pinterest – SAVEE.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\f3497c24-a914-4623-9499-698e3480c969strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/a27d0ab6-bab7-462e-b4cb-f9908f8f2850Roger Alves - Pinterest – SAVEE.png</RelativePath>
+      <RelativePath>uploads/portfolio/f3497c24-a914-4623-9499-698e3480c969strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31790,55 +31758,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\a27d0ab6-bab7-462e-b4cb-f9908f8f2850Roger Alves - Pinterest – SAVEE.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\b753a224-2140-402d-ad5e-318c7fe04e54990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/b753a224-2140-402d-ad5e-318c7fe04e54990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\b753a224-2140-402d-ad5e-318c7fe04e54990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\c76617eb-9ae3-434a-ae30-ef8c17905fcda Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/c76617eb-9ae3-434a-ae30-ef8c17905fcda Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\c76617eb-9ae3-434a-ae30-ef8c17905fcda Good Tooth and Bad Tooth_ Two Art Print Set - Etsy Ireland.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\e897882a-c7bf-467d-ace2-f0bd5646e00dar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>JobBoard</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/portfolio/e897882a-c7bf-467d-ace2-f0bd5646e00dar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\e897882a-c7bf-467d-ace2-f0bd5646e00dar_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2 - Kopya.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\portfolio\f3497c24-a914-4623-9499-698e3480c969strati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\QuestionsSectionImage\4233450-612x612-1-p6ozj9i5ekqltoixjxsglgyp9ab4xqc9x0b1cuwmfc.jpg))">
       <SourceType>Package</SourceType>
@@ -31855,6 +31775,150 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\QuestionsSectionImage\4233450-612x612-1-p6ozj9i5ekqltoixjxsglgyp9ab4xqc9x0b1cuwmfc.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\reklam\8b91b1a8-3255-4815-9aa4-1754b83081c8pizza.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/reklam/8b91b1a8-3255-4815-9aa4-1754b83081c8pizza.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\reklam\8b91b1a8-3255-4815-9aa4-1754b83081c8pizza.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\reklam\b9a6b090-369f-4889-8165-9c377ae402b4pepsi.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/reklam/b9a6b090-369f-4889-8165-9c377ae402b4pepsi.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\reklam\b9a6b090-369f-4889-8165-9c377ae402b4pepsi.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\2795a502-489f-41f7-8bba-55949a288d44ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/2795a502-489f-41f7-8bba-55949a288d44ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\2795a502-489f-41f7-8bba-55949a288d44ingdom-or-company-logo-5ac60e038172d1.2257601215229291555302.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\393f9a75-b1b7-4e79-b355-41d1a772694astrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/393f9a75-b1b7-4e79-b355-41d1a772694astrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\393f9a75-b1b7-4e79-b355-41d1a772694astrati-mountain-stream-5a7f40bfc7e5b6.5800098315182890878188.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\3c5d9439-3c5d-46fc-b89d-5723bb07801apngwing.com (1).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/3c5d9439-3c5d-46fc-b89d-5723bb07801apngwing.com (1).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\3c5d9439-3c5d-46fc-b89d-5723bb07801apngwing.com (1).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\4df42a61-65be-4f08-a524-d0f47982c1b1ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/4df42a61-65be-4f08-a524-d0f47982c1b1ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\4df42a61-65be-4f08-a524-d0f47982c1b1ny-logo-business-bison-5ac6bc3ab9bab3.2610738615229737547608.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\6c5cc8b6-da23-4522-b00d-7a75b7687edcric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/6c5cc8b6-da23-4522-b00d-7a75b7687edcric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\6c5cc8b6-da23-4522-b00d-7a75b7687edcric-g-marshall-d-teach-5b163313ebc384.5623756115281815239657.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\c8c364d4-52bc-4094-92d1-f92273e81169pngwing.com (1).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/c8c364d4-52bc-4094-92d1-f92273e81169pngwing.com (1).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\c8c364d4-52bc-4094-92d1-f92273e81169pngwing.com (1).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\d2da66c8-9618-4f51-b4eb-97887cede20d990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/supports/d2da66c8-9618-4f51-b4eb-97887cede20d990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\supports\d2da66c8-9618-4f51-b4eb-97887cede20d990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\team\hazırlanacaq.png))">
       <SourceType>Package</SourceType>
@@ -31904,12 +31968,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\team\WhatsApp Image 2023-02-10 at 6.58.53 AM.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\8297a867-ad0e-4c1c-99d3-df82abc2e885s-l400.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/JobBoard</BasePath>
-      <RelativePath>uploads/users/990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <RelativePath>uploads/users/8297a867-ad0e-4c1c-99d3-df82abc2e885s-l400.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -31918,7 +31982,23 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\8297a867-ad0e-4c1c-99d3-df82abc2e885s-l400.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\ce162f4e-e615-436b-84bc-89267f913575s-l400.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/users/ce162f4e-e615-436b-84bc-89267f913575s-l400.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\ce162f4e-e615-436b-84bc-89267f913575s-l400.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\default-profile.png))">
       <SourceType>Package</SourceType>
@@ -31935,6 +32015,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\default-profile.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\f1ba309a-98fe-4e00-9f95-7e82004158bf990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/users/f1ba309a-98fe-4e00-9f95-7e82004158bf990f5fbc-2cb8-40d9-89e6-d4602717fb03.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\f1ba309a-98fe-4e00-9f95-7e82004158bf990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\users\flying_car_company_logo_dbf67bdf-2e54-4fc0-87b0-a5dc46ccbbb2.png))">
       <SourceType>Package</SourceType>

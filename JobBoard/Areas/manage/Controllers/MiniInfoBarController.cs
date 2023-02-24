@@ -86,7 +86,7 @@ namespace JobBoard.Areas.manage.Controllers
             if (miniInfoBar == null) return View("Error");
             jobBoardContext.miniInfoBars.Remove(miniInfoBar);
             jobBoardContext.SaveChanges();
-            return RedirectToAction("index");
-        }
+			return Ok();
+		}
 	}
 }

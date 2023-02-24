@@ -60,7 +60,7 @@ namespace JobBoard.Areas.manage.Controllers
             }
             jobBoardContext.catagories.Remove(catagory);
             jobBoardContext.SaveChanges();
-            return RedirectToAction("Index");
-        }
+			return Ok();
+		}
     }
 }

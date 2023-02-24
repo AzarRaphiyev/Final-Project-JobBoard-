@@ -367,7 +367,6 @@ namespace JobBoard.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<int>("Experince")
-                        .HasMaxLength(50)
                         .HasColumnType("int");
 
                     b.Property<int>("GenderId")
@@ -681,6 +680,39 @@ namespace JobBoard.Migrations
                     b.ToTable("questionsSectionImages");
                 });
 
+            modelBuilder.Entity("JobBoard.Models.Reklam", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("DeadlineTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Image")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("reklams");
+                });
+
             modelBuilder.Entity("JobBoard.Models.ServicesSite", b =>
                 {
                     b.Property<int>("Id")
@@ -710,6 +742,26 @@ namespace JobBoard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("services");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.Supports", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Image")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("supportsCompany");
                 });
 
             modelBuilder.Entity("JobBoard.Models.Team", b =>

@@ -30,7 +30,7 @@ namespace JobBoard.Areas.manage.Controllers
 			if (deleteContact == null) return View("error");
 			jobBoardContext.Contacts.Remove(deleteContact);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("index");
+			return Ok();
 		}
 
 	}

@@ -90,7 +90,7 @@ namespace JobBoard.Areas.manage.Controllers
 			FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/QuestionsSectionImage", questionsSectionImage.Image);
 			jobBoardContext.questionsSectionImages.Remove(questionsSectionImage);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("index");
+			return Ok();
 
 		}
 	}

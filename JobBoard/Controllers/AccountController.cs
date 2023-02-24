@@ -65,7 +65,7 @@ namespace JobBoard.Controllers
 		}
 		#endregion
 
-		#region RegisterMember
+		 #region RegisterMember
 
 		public IActionResult RegisterMember()
 		{

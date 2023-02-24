@@ -24,6 +24,10 @@ namespace JobBoard.Helpers
 				System.IO.File.Delete(deletepath);
 			}
 		}
+		public static void CheckFile(string filename,int lenght)
+		{
+
+		}
 		
 	}
 }

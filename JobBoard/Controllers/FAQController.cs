@@ -16,6 +16,7 @@ namespace JobBoard.Controllers
 			{
 				Images = jobBoardContext.questionsSectionImages.Take(1).ToList(),
 				QuestionsAndAnswers = jobBoardContext.questionsAndAnswers.OrderBy(x => x.order).Take(5).ToList(),
+				Comments=jobBoardContext.commentSites.Where(x=>x.IsFavorıte==true).Take(2).ToList(),
 			};
 			return View(FaqVm);
 		}

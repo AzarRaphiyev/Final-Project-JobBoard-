@@ -56,7 +56,7 @@ namespace JobBoard.Areas.manage.Controllers
             if (jobRegion==null) { return View("error"); }
             jobBoardContext.Regions.Remove(jobRegion);
             jobBoardContext.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
+			return Ok();
+		}
     }
 }

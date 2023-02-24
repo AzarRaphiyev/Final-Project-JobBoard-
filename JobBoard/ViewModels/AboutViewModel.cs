@@ -6,5 +6,6 @@
 		public List<AppUser> members  { get; set; }
 		public List<Team> TeamMembers  { get; set; }
 		public List<MiniInfoBar> miniInfoBars { get; set; }
+		public List<Job> jobs { get; set; }
 	}
 }

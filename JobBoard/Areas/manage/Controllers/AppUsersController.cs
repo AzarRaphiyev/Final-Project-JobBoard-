@@ -37,7 +37,7 @@ namespace JobBoard.Areas.manage.Controllers
             FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/users", appUser.Image);
             jobBoardContext.Users.Remove(appUser);
             jobBoardContext.SaveChanges();
-            return RedirectToAction("Index");
-        }
+			return Ok();
+		}
     }
 }

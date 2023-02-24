@@ -48,7 +48,7 @@ namespace JobBoard.Areas.manage.Controllers
 			FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/commentsite", commentSite.Commentatorİmage);
 			jobBoardContext.commentSites.Remove(commentSite);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("Index");
+			return Ok();
 		}
 		public IActionResult Details(int id)
 		{

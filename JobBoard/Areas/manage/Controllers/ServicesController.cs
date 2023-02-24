@@ -74,9 +74,9 @@ namespace JobBoard.Areas.manage.Controllers
             }
             jobBoardContext.services.Remove(servicesSite);
             jobBoardContext.SaveChanges();
-            return RedirectToAction("index");
+			return Ok();
 
-        }
+		}
 
     }
 }

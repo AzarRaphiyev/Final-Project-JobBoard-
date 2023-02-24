@@ -11279,3 +11279,106 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+
+
+body {
+    background: #333;
+}
+
+#dropzone {
+    position: relative;
+    border: 10px dotted #FFF;
+    border-radius: 20px;
+    color: white;
+    font: bold 24px/200px arial;
+    height: 200px;
+    margin: 30px auto;
+    text-align: center;
+    width: 300px;
+}
+
+    #dropzone.hover {
+        border: 10px solid #FE5;
+        color: #FE5;
+    }
+
+    #dropzone.dropped {
+        background: #222;
+        border: 10px solid #444;
+    }
+
+    #dropzone div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    #dropzone img {
+        border-radius: 10px;
+        vertical-align: middle;
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    #dropzone [type="file"] {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+
+
+#Posterdropzone {
+    position: relative;
+    border: 10px dotted #FFF;
+    border-radius: 20px;
+    color: white;
+    font: bold 24px/200px arial;
+    height: 200px;
+    margin: 30px auto;
+    text-align: center;
+    width: 300px;
+}
+
+    #Posterdropzone.hover {
+        border: 10px solid #FE5;
+        color: #FE5;
+    }
+
+    #Posterdropzone.dropped {
+        background: #222;
+        border: 10px solid #444;
+    }
+
+    #Posterdropzone div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    #Posterdropzone img {
+        border-radius: 10px;
+        vertical-align: middle;
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    #Posterdropzone [type="file"] {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+

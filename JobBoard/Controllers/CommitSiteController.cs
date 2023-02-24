@@ -23,12 +23,14 @@ namespace JobBoard.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.comment=jobBoardcontext.commentSites.Where(x=>x.IsFavorıte).Take(2).ToList();
             return View();
         }
         [HttpPost]
         public IActionResult Create(CommentSite commentSite)
         {
-            if (!ModelState.IsValid)
+			ViewBag.comment = jobBoardcontext.commentSites.Where(x => x.IsFavorıte).Take(2).ToList();
+			if (!ModelState.IsValid)
             {
                 return View();
             }

@@ -60,7 +60,7 @@ namespace JobBoard.Areas.manage.Controllers
             ExtcontactİnfoBar.Email = contactİnfoBar.Email;
             jobBoardContext.SaveChanges();
 
-        return RedirectToAction("Index");
-        }
+			return Ok();
+		}
     }
 }

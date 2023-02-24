@@ -108,7 +108,7 @@ namespace JobBoard.Areas.manage.Controllers
 			FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/blog", blog.Image);
 			jobBoardContext.blogs.Remove(blog);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("index");
+			return Ok();
 		}
 	}
 }

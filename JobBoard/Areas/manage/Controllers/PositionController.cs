@@ -59,7 +59,7 @@ namespace JobBoard.Areas.manage.Controllers
 			}
 			jobBoardContext.positions.Remove(position);
 			jobBoardContext.SaveChanges();
-            return RedirectToAction("Index");
-        }
+			return Ok();
+		}
 	}
 }

@@ -10,9 +10,9 @@
 					<li><a asp-action="index" asp-controller="home" class="nav-link active">Home</a></li>
 					<li><a asp-action="index" asp-controller="about">About</a></li>
 					<li class="has-children">
-						<a href="job-listings.html">Job Listings</a>
+						<a asp-action="index" asp-controller="job">Job Listings</a>
 						<ul class="dropdown">
-							<li><a href="job-single.html">Job Single</a></li>
+							<li><a asp-action="index" asp-controller="company">Company List</a></li>
 							<li><a href="post-job.html">Post a Job</a></li>
 						</ul>
 					</li>
@@ -22,7 +22,7 @@
 							<li><a asp-action="index" asp-controller="Services">Services</a></li>
 							<li><a asp-action="create" asp-controller="CommitSite">Comment</a></li>
 
-							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a asp-action="index" asp-controller="portfolio">Portfolio</a></li>
 							<li><a asp-action="index" asp-controller="Testimonials">Testimonials</a></li>
 							<li><a asp-action="index" asp-controller="faq">Frequently Ask Questions</a></li>
 						</ul>
@@ -39,9 +39,8 @@
 					{
 						if (User.IsInRole("Company"))
 						{
-							<a href="post-job.html" class="btn btn-outline-white "><span class="mr-2 icon-add"></span>Post a Job</a>
+							<a asp-action="create" asp-controller="job" class="btn btn-outline-white "><span class="mr-2 icon-add"></span>Post a Job</a>
 							<a asp-action="Edit" asp-controller="Company" asp-route-username="@User.Identity.Name" class="btn btn-primary ">  <i class="bi bi-building-fill-gear"></i> </a>
-							<a asp-action="delete" asp-controller="Company" asp-route-username="@User.Identity.Name" class="btn btn-primary "> <i class="bi bi-building-fill-dash"></i></a>
 							<a asp-action="logout" asp-controller="account" class="btn btn-primary "> <i class="bi bi-box-arrow-left"></i> </a>
 						}
 						if (User.IsInRole("SuperAdmin")||User.IsInRole("Admin"))

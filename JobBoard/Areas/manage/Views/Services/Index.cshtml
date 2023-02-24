@@ -29,7 +29,7 @@
 						<td>@Html.Raw(item.Icon)</td>
 						<td>
 							<a asp-action="update" asp-controller="Services" asp-route-id="@item.Id" class="btn btn-outline-primary"> <i class="bi bi-pencil-square"></i> </a>
-						<a asp-action="Delate" asp-controller="Services" asp-route-id="@item.Id" class="btn btn-outline-danger"> <i class="fas fa-trash"></i> </a>
+						<a asp-action="Delate" asp-controller="Services" asp-route-id="@item.Id" class=" deletebtn btn btn-outline-danger"> <i class="fas fa-trash"></i> </a>
 						</td>
 					</tr>
 			}

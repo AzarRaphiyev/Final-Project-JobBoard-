@@ -74,7 +74,7 @@ namespace JobBoard.Areas.manage.Controllers
 			}
 			jobBoardContext.questionsAndAnswers.Remove(answer);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("Index");
+			return Ok();
 		}
 	}
 }

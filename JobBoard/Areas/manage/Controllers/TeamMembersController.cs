@@ -101,7 +101,7 @@ namespace JobBoard.Areas.manage.Controllers
             jobBoardContext.JonTeamMembers.Remove(teamMember);
             jobBoardContext.SaveChanges();
 
-            return RedirectToAction("index");
-        }
+			return Ok();
+		}
     }
 }

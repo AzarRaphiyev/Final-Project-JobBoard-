@@ -18,7 +18,8 @@ namespace JobBoard.Controllers
 		}
 		public IActionResult Index()
 		{
-			return View();
+			List<Company> companies = jobBoardContext.companies.ToList();
+			return View(companies);
 		}
 		public IActionResult Edit(string username)
 		{
@@ -34,8 +35,9 @@ namespace JobBoard.Controllers
 			{
 				return View("error");
 			}
+			
 
-			AppUser appUser= jobBoardContext.Users.FirstOrDefault(x=>x.UserName==company.UserName);
+			AppUser appUser= jobBoardContext.Users.FirstOrDefault(x=>x.UserName==ExstCompany.UserName);
 			if (appUser==null) { return View("error"); }
 
 
@@ -53,6 +55,7 @@ namespace JobBoard.Controllers
 				}
 				FileManager.DeleteFile(webHostEnvironment.WebRootPath,"uploads/users",ExstCompany.Image);
 				ExstCompany.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/users", company.ImageFile);
+				appUser.Image=ExstCompany.Image;
 			}
 
 			ExstCompany.Fullname = company.Fullname;
@@ -64,28 +67,26 @@ namespace JobBoard.Controllers
 			ExstCompany.LinkedinUrl= company.LinkedinUrl;
 			ExstCompany.TwitterUrl= company.TwitterUrl;
 			appUser.FullName = company.Fullname;
+			appUser.Email = company.Email;
+			appUser.UserName= company.UserName;
 
 
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index","Home");
 		}
-		public async Task< IActionResult> Delete(string Username) 
+		public IActionResult Details(int id)
 		{
-			Company company = jobBoardContext.companies.FirstOrDefault(x=>x.UserName==Username);
-			if (company==null)
+			Company company=jobBoardContext.companies.FirstOrDefault(x => x.Id==id);
+			if (company==null) { return View("Error"); }
+			CompanyViewModel companyViewModel = new CompanyViewModel
 			{
-				return NotFound();
-			}
-			if (company.ImageFile!=null) { FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/users", company.Image); }
+				RelationJobs = jobBoardContext.Jobs.Where(x => x.CompanyId == company.Id).Include(x => x.JobType).Include(x => x.Company).ToList(),
+				Company = company,
+			};
 
-			AppUser user = await userManager.FindByEmailAsync(company.Email);
-			if (user==null) { return NotFound(); }
-			jobBoardContext.companies.Remove(company);	
-			jobBoardContext.Users.Remove(user);
-			jobBoardContext.SaveChanges();
-
-		    return RedirectToAction("Logout","Account");
+			return View(companyViewModel);
 		}
+		
 
 	}
 }

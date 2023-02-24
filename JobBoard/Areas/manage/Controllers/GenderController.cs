@@ -56,7 +56,7 @@ namespace JobBoard.Areas.manage.Controllers
 			if (gender == null) { return View("error"); }
 			jobBoardContext.genders.Remove(gender);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction(nameof(Index));
+			return Ok();
 		}
 	}
 }

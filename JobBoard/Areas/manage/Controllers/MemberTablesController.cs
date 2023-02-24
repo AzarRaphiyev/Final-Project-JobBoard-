@@ -34,7 +34,7 @@ namespace JobBoard.Areas.manage.Controllers
 			jobBoardContext.members.Remove(member);
 			jobBoardContext.Remove(user);
 			jobBoardContext.SaveChanges();
-			return RedirectToAction("Index");
+			return Ok();
 		}
 	}
 }

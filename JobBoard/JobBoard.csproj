@@ -26,6 +26,8 @@
     <Folder Include="wwwroot\uploads\blog\" />
     <Folder Include="wwwroot\uploads\commentsite\" />
     <Folder Include="wwwroot\uploads\job\" />
+    <Folder Include="wwwroot\uploads\reklam\" />
+    <Folder Include="wwwroot\uploads\supports\" />
     <Folder Include="wwwroot\uploads\portfolio\" />
     <Folder Include="wwwroot\uploads\QuestionsSectionImage\" />
     <Folder Include="wwwroot\uploads\team\" />

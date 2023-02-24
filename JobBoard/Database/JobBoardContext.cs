@@ -30,5 +30,7 @@ namespace JobBoard.Database
 		public DbSet<JobRegion> Regions { get; set; }
 		public DbSet<Gender> genders { get; set; }
 		public DbSet<Job> Jobs { get; set; }
+		public DbSet<Supports> supportsCompany { get; set; }
+		public DbSet<Reklam> reklams { get; set; }
 	}
 }
