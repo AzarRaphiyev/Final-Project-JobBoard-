@@ -1,5 +1,8 @@
 ﻿
 
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+
 namespace JobBoard.Areas.manage.Controllers
 {
     [Area("manage")]
@@ -12,10 +15,11 @@ namespace JobBoard.Areas.manage.Controllers
         {
             this.jobBoardContext = jobBoardContext;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            List<AppUser> Admins = jobBoardContext.Users.Where(x=>x.Role=="Admin").ToList();
-            return View(Admins);
+            var query = jobBoardContext.Users.Where(x => x.Role == "Admin").AsQueryable();
+			var paginatedlist = PaginationList<AppUser>.Create(query, 3, page);
+			return View(paginatedlist);
         }
         public IActionResult Delete(string id) 
         {

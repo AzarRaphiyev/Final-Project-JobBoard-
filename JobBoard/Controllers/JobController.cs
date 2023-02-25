@@ -1,6 +1,8 @@
 ﻿using JobBoard.Helpers;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Drawing;
 
 namespace JobBoard.Controllers
 {
@@ -15,7 +17,7 @@ namespace JobBoard.Controllers
             this.webHostEnvironment = webHostEnvironment;
         }
 
-        public IActionResult Index(string? searchBy = null, string? search = null, int? RegionId = null, int? TypeId = null)
+        public IActionResult Index(string? searchBy = null, string? search = null, int? RegionId = null, int? TypeId = null, int page = 1)
         {
 
             ViewBag.Region = jobBoardContext.Regions.ToList();
@@ -26,39 +28,46 @@ namespace JobBoard.Controllers
             if (searchBy == "Name")
             {
                 var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).AsQueryable();
-                if (search!=null)
+                if (search != null)
                 {
                     model.jobs = query.Where(s => s.Title.Contains(search)).ToList();
+                    model.paginatedlist = PaginationList<Job>.Create(query.Where(s => s.Title.Contains(search)), 7, page);
                 }
                 if (TypeId != null)
                 {
                     model.jobs = query.Where(s => s.JobTypeId == TypeId).ToList();
+                    model.paginatedlist = PaginationList<Job>.Create(query.Where(s => s.JobTypeId == TypeId), 7, page);
                 }
                 if (RegionId != null)
                 {
                     model.jobs = query.Where(s => s.JobRegionId == RegionId).ToList();
+                    model.paginatedlist = PaginationList<Job>.Create(query.Where(s => s.JobRegionId == RegionId), 7, page);
+                    return View(model);
+                    //model = new JobsViewModel
+                    //{
+
+
+                    //    //.Where(p => p.Title.StartsWith(search != null ? search : null!))
+                    //    //.Where(p => p.JobRegionId == RegionId != null ? RegionId:)
+                    //    //.Where(p => p.JobTypeId == TypeId)
+                    //   ///* Where(x => x.JobRegionId == RegionId).Where(x => x.JobTypeId == TypeId || TypeId == 0)*/.ToList(),
+                    //};
                 }
                 return View(model);
-                //model = new JobsViewModel
-                //{
-
-
-                //    //.Where(p => p.Title.StartsWith(search != null ? search : null!))
-                //    //.Where(p => p.JobRegionId == RegionId != null ? RegionId:)
-                //    //.Where(p => p.JobTypeId == TypeId)
-
-                //   ///* Where(x => x.JobRegionId == RegionId).Where(x => x.JobTypeId == TypeId || TypeId == 0)*/.ToList(),
-                //};
             }
-            else
-            {
-                model = new JobsViewModel
+                else
                 {
-                    jobs = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).ToList(),
-                };
-            }
-            return View(model);
+                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).AsQueryable();
+                model = new JobsViewModel
+                    {
+                        jobs = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).ToList(),
+                        paginatedlist = PaginationList<Job>.Create(query, 7, page),
+
+                    };
+                }
+                return View(model);
         }
+        
         [HttpGet]
         public IActionResult Create()
 
@@ -108,7 +117,65 @@ namespace JobBoard.Controllers
             return RedirectToAction("index", "home");
         }
 
-
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            ViewBag.Region = jobBoardContext.Regions.ToList();
+            ViewBag.Type = jobBoardContext.jobTypes.ToList();
+            ViewBag.Genre = jobBoardContext.genders.ToList();
+            Job job=jobBoardContext.Jobs.Include(x=>x.JobType).Include(x => x.JobRegion).Include(x => x.Gender).FirstOrDefault(x => x.Id == id);
+            if (job == null) { return View("error"); }
+            return View(job);
+        }
+        [HttpPost]
+        public IActionResult Update (Job UpdateJob) 
+        {
+            ViewBag.Region = jobBoardContext.Regions.ToList();
+            ViewBag.Type = jobBoardContext.jobTypes.ToList();
+            ViewBag.Genre = jobBoardContext.genders.ToList();
+            Job ExtJob = jobBoardContext.Jobs.FirstOrDefault(x=>x.Id == UpdateJob.Id);
+            if (ExtJob == null) { return View("error"); }
+            if (UpdateJob.ImageFile!=null)
+            {
+                if (UpdateJob.ImageFile.ContentType != "image/png" && UpdateJob.ImageFile.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ImageFile", "But Png, Jpeg and Jpg can be downloaded");
+                    return View();
+                }
+                if (UpdateJob.ImageFile.Length > 3145728)
+                {
+                    ModelState.AddModelError("ImageFile", "It cannot be more than 3 MB");
+                    return View();
+                }
+                FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/job", ExtJob.Image);
+                ExtJob.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/job", UpdateJob.ImageFile);
+            }
+            ExtJob.Title= UpdateJob.Title;
+            ExtJob.Description= UpdateJob.Description;
+            ExtJob.ApplicationDeadline= UpdateJob.ApplicationDeadline;
+            ExtJob.JobTypeId= UpdateJob.JobTypeId;
+            ExtJob.EduExperience= UpdateJob.EduExperience;
+            ExtJob.Vacancy= UpdateJob.Vacancy;
+            ExtJob.Order= UpdateJob.Order;
+            ExtJob.JobRegionId= UpdateJob.JobRegionId;
+            ExtJob.Responsibilities= UpdateJob.Responsibilities;
+            ExtJob.Experince= UpdateJob.Experince;  
+            ExtJob.GenderId= UpdateJob.GenderId;
+            ExtJob.MaxSalary= UpdateJob.MaxSalary;
+            ExtJob.MinSalary= UpdateJob.MinSalary;
+            ExtJob.OutherBenifits=UpdateJob.OutherBenifits;
+            jobBoardContext.SaveChanges();
+            return RedirectToAction("index","home");
+        }
+        public IActionResult Delete(int id)
+        {
+            Job job = jobBoardContext.Jobs.FirstOrDefault(x => x.Id == id);
+            if (job == null) { return View("Error"); }
+            FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/job", job.Image);
+            jobBoardContext.Jobs.Remove(job);
+            jobBoardContext.SaveChanges();
+            return Ok(job);
+        }
         public IActionResult Details(int id)
         {
             Job DetailJob = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.JobRegion).Include(x => x.Gender).FirstOrDefault(x => x.Id == id);

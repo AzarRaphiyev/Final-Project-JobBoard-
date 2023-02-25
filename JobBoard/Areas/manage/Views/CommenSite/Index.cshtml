@@ -1,4 +1,4 @@
-﻿@model List<CommentSite>
+﻿@model PaginationList<CommentSite>
 @{
 	ViewData["Title"] = "Index";
 	int count = 0;
@@ -46,8 +46,38 @@
 		</tbody>
 	</table>
 
+	<div class="d-flex justify-content-center">
+
+		<form method="get">
+
+			<nav aria-label="...">
+				<ul class="pagination">
+					@if (Model.HasPrevios)
+					{
+						<li class="page-item ">
+							<a class="page-link" asp-action="index" asp-controller="CommenSite" asp-route-page="@(Model.Page-1)" tabindex="-1" aria-disabled="true">Previous</a>
+						</li>
+					}
+
+					@for (int i = 1; i < Model.TotalPage; i++)
+					{
+						<li class="page-item @(Model.Page==i ? "active" : "" )"><a class="page-link" asp-action="index" asp-controller="CommenSite" asp-route-page="@i">@i</a></li>
+					}
 
 
+					@if (Model.HasNextios)
+					{
+						<li class="page-item">
+							<a class="page-link" asp-action="index" asp-controller="CommenSite" asp-route-page="@(Model.Page+1)">Next</a>
+						</li>
+					}
+				</ul>
+			</nav>
+
+		</form>
+
+
+	</div>
 
 
 

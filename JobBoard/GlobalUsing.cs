@@ -11,3 +11,4 @@ global using JobBoard.Areas.manage.ViewModels;
 global using Microsoft.AspNetCore.Authorization;
 global using System.Data;
 global using JobBoard.ViewModels;
+global using JobBoard.Helpers;

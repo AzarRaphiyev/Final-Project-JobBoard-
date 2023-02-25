@@ -1,5 +1,6 @@
 ﻿using JobBoard.Database;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JobBoard.Areas.manage.Controllers
 {
@@ -12,10 +13,13 @@ namespace JobBoard.Areas.manage.Controllers
 		{
 			this.jobBoardContext = jobBoardContext;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int page=1)
 		{
-			List<JobType> types = jobBoardContext.jobTypes.OrderByDescending(x => x.Id).ToList();
-			return View(types);
+			var query = jobBoardContext.jobTypes.AsQueryable();
+
+			var paginatedlist = PaginationList<JobType>.Create(query, 3, page);
+			return View(paginatedlist);
+			
 		}
 		public IActionResult Create()
 		{

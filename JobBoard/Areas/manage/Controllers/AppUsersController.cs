@@ -1,5 +1,6 @@
 ﻿using JobBoard.Helpers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JobBoard.Areas.manage.Controllers
 {
@@ -14,10 +15,13 @@ namespace JobBoard.Areas.manage.Controllers
             this.jobBoardContext = jobBoardContext;
             this.webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            List<AppUser> users = jobBoardContext.Users.ToList();
-            return View(users);
+			var query = jobBoardContext.Users.AsQueryable();
+
+			var paginatedlist = PaginationList<AppUser>.Create(query, 3, page);
+			return View(paginatedlist);
+		
         }
         public IActionResult Activateuser(string id)
         {
@@ -34,8 +38,26 @@ namespace JobBoard.Areas.manage.Controllers
         {
         AppUser appUser=jobBoardContext.Users.FirstOrDefault(x=>x.Id == id);    
             if (appUser==null)  return View("error");
+            Company company = jobBoardContext.companies.FirstOrDefault(x => x.UserName == appUser.UserName);
+            if (company==null)
+            {
+                Member member= jobBoardContext.members.FirstOrDefault(x=>x.UserName== appUser.UserName);
+                if (member==null)
+                {
+                    return View("error");
+                }
+                else
+                {
+                    jobBoardContext.members.Remove(member);
+                }
+            }
+            else
+            {
+             jobBoardContext.companies.Remove(company);
+            }
             FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/users", appUser.Image);
             jobBoardContext.Users.Remove(appUser);
+           
             jobBoardContext.SaveChanges();
 			return Ok();
 		}

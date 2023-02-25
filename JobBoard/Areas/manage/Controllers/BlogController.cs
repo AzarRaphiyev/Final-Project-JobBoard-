@@ -1,6 +1,7 @@
 ﻿using JobBoard.Helpers;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics.Metrics;
 
 namespace JobBoard.Areas.manage.Controllers
@@ -16,10 +17,13 @@ namespace JobBoard.Areas.manage.Controllers
 			this.jobBoardContext = jobBoardContext;
 			this.webHostEnvironment = webHostEnvironment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int page=1)
 		{
-			List<Blog> blogList = jobBoardContext.blogs.Include(x=>x.Authour).Include(x=>x.Catagory).ToList();
-			return View(blogList);
+			var query = jobBoardContext.blogs.Include(x => x.Authour).Include(x => x.Catagory).AsQueryable();
+
+			var paginatedlist = PaginationList<Blog>.Create(query, 3, page);
+			return View(paginatedlist);
+			
 		}
 		public IActionResult Create() 
 		{

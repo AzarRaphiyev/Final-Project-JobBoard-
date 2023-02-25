@@ -1,6 +1,7 @@
 ﻿using JobBoard.Helpers;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace JobBoard.Areas.manage.Controllers
@@ -16,10 +17,13 @@ namespace JobBoard.Areas.manage.Controllers
 			this.jobBoardContext = jobBoardContext;
 			this.webHostEnvironment = webHostEnvironment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int page=1)
 		{
-			List<PortfolioItem> portfolioItems = jobBoardContext.portfolioItems.Include(x => x.Team).Include(x => x.poerfolioCatagories).Include(x => x.portfolioItemImages).ToList();
-			return View(portfolioItems);
+			
+			var query = jobBoardContext.portfolioItems.Include(x => x.Team).Include(x => x.poerfolioCatagories).Include(x => x.portfolioItemImages).AsQueryable();
+
+			var paginatedlist = PaginationList<PortfolioItem>.Create(query, 3, page);
+			return View(paginatedlist);
 		}
 
 
@@ -202,9 +206,12 @@ namespace JobBoard.Areas.manage.Controllers
 				{
 					foreach (var item in DeletedImage.Where(x => x.IsPoster == null))
 					{
-						PortfolioItemImages Image = jobBoardContext.portfolioItemImages.FirstOrDefault(x => x.Id == item.Id);
-						FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", item.Images);
-						jobBoardContext.portfolioItemImages.Remove(Image);
+						if (item.Id!=0)
+						{
+                            PortfolioItemImages Image = jobBoardContext.portfolioItemImages.FirstOrDefault(x => x.Id == item.Id);
+                            FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/portfolio", item.Images);
+                            jobBoardContext.portfolioItemImages.Remove(Image);
+                        }
 					}
 				}
 			}

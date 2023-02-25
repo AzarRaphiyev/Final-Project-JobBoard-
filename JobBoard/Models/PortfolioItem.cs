@@ -28,7 +28,7 @@
 		public List<IFormFile>? ImageFiles { get; set; }
 
 		[NotMapped]
-		public IFormFile? PosterImageFile { get; set; }
+		public IFormFile PosterImageFile { get; set; }
 		public Team? Team { get; set; }
 		public PoerfolioCatagory? poerfolioCatagories { get; set; }
 		[NotMapped]

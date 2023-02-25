@@ -12,10 +12,13 @@ namespace JobBoard.Areas.manage.Controllers
 		{
 			this.jobBoardContext = jobBoardContext;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int page=1)
 		{
-			List<AppUser> Companies= jobBoardContext.Users.Where(x=>x.Role=="Company"&&x.Enabled==true).ToList();
-			return View(Companies);
+			var query = jobBoardContext.Users.Where(x => x.Role == "Company" && x.Enabled == true).AsQueryable();
+
+			var paginatedlist = PaginationList<AppUser>.Create(query, 3, page);
+			return View(paginatedlist);
+			
 		}
 		public IActionResult Delete(string id)
 		{

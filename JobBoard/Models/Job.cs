@@ -12,16 +12,19 @@
 		public DateTime ApplicationDeadline { get; set; }
 
 		[Required]
-		public int MaxSalary { get; set; }
+        [Range(minimum:0 ,maximum:10000000, ErrorMessage = "The minimum should be 50 and the maximum should be 10000000")]
+        public int MaxSalary { get; set; }
 
 		[Required]
-		public int MinSalary { get; set; }
+        [Range(minimum:0 ,maximum:10000000, ErrorMessage = "The minimum should be 50 and the maximum should be 10000000")]
+        public int MinSalary { get; set; }
 		[Required]
-		[Range(0,50,ErrorMessage ="Maksimum 50  olmalidi")]
+		[Range(0,50,ErrorMessage = "The minimum should be 0 and the maximum should be 50")]
 		public int Experince { get; set; }
 
 		[Required]
-		public int	 Vacancy { get; set; }
+        [Range(0, 500, ErrorMessage = "The minimum should be 0 and the maximum should be 500")]
+        public int	 Vacancy { get; set; }
 
 		[Required]
 		[StringLength(maximumLength: 1000, ErrorMessage = "Can be a maximum of 1000 characters")]

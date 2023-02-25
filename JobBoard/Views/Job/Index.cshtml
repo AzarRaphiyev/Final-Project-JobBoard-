@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Index";
     int countjob = 0;
+    int count = 0;
     foreach (var item in Model.jobs)
     {
         countjob++;
@@ -69,8 +70,9 @@
                     </div>
                 </div>
                 <ul class="job-listings mb-5">
-                    @foreach (var item in Model.jobs)
+                    @foreach (var item in Model.paginatedlist)
             {
+                count++;
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                     <a  asp-action="details" asp-controller="job" asp-route-id="@item.Id"></a>
                     <div class="job-listing-logo">
@@ -78,7 +80,7 @@
                     </div>
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                         <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                            <h2>@item.Title</h2>
+                            <h2>#@count @item.Title</h2>
                             <strong>@item.Company.Fullname</strong>
                         </div>
                         <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
@@ -99,23 +101,38 @@
                 </li>
             }
                 </ul>
-                <div class="row pagination-wrap">
-                    <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-                        <span>Showing 1-7 Of 43,167 Jobs</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-right">
-                        <div class="custom-pagination ml-auto">
-                            <a href="#" class="prev">Prev</a>
-                            <div class="d-inline-block">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
+        <div class="row pagination-wrap">
+            <div class="col-md-6 text-center text-md-right">
+                <form method="get">
+
+                    <div class="row pagination-wrap mt-5">
+                        <div class="col-md-12 text-center ">
+                            <div class="custom-pagination ml-auto">
+                                @if (Model.paginatedlist.HasPrevios)
+                                {
+                                    <a asp-action="index" asp-controller="Home" asp-route-page="@(Model.paginatedlist.Page-1)" class="prev">Prev</a>
+                                }
+                                <div class="d-inline-block">
+                                    @for (int i = 1; i < Model.paginatedlist.TotalPage; i++)
+                                    {
+
+                                        <a asp-action="index" asp-controller="Home" asp-route-page="@i" class=" @(Model.paginatedlist.Page==i ? "active" : "" )">@i</a>
+
+
+                                    }
+                                    @if (Model.paginatedlist.HasNextios)
+                                    {
+                                        <a asp-action="index" asp-controller="Home" asp-route-page="@(Model.paginatedlist.Page+1)" class="prev">Next</a>
+                                    }
+                                </div>
                             </div>
-                            <a href="#" class="next">Next</a>
                         </div>
                     </div>
-                </div>
+
+
+                </form>
+            </div>
+        </div>
             </div>
         </section>
 

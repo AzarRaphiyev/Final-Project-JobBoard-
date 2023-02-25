@@ -3,6 +3,7 @@
 	public class IndexViewModel
 	{
 		public List<Job> jobs { get; set; }
+		public PaginationList<Job> paginatedlist { get; set; }
 		public Job job { get; set; }
 		public List<Supports> Supports { get; set; }
 		public List<Reklam> reklams { get; set; }

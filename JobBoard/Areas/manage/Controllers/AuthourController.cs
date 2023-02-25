@@ -1,4 +1,4 @@
-﻿using JobBoard.Helpers;
+﻿ using JobBoard.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobBoard.Areas.manage.Controllers
@@ -14,10 +14,12 @@ namespace JobBoard.Areas.manage.Controllers
             this.jobBoardContext = jobBoardContext;
             this.webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page	=1)
         {
-            List<Authour> authourList = jobBoardContext.authours.ToList();
-            return View(authourList);
+			var query = jobBoardContext.authours.AsQueryable();
+
+			var paginatedlist = PaginationList<Authour>.Create(query, 3, page);
+            return View(paginatedlist);
         }
 		public IActionResult Create()
 		{

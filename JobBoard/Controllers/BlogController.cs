@@ -1,5 +1,6 @@
 ﻿using JobBoard.Helpers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace JobBoard.Controllers
@@ -14,11 +15,15 @@ namespace JobBoard.Controllers
             this.jobBoardContext = jobBoardContext;
             this.webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            List<Blog> blogList = jobBoardContext.blogs.Include(x=>x.Authour).Include(x=>x.Catagory).OrderBy(x=>x.order).ToList();
-            return View(blogList);
-        }
+          
+			var query = jobBoardContext.blogs.Include(x => x.Authour).Include(x => x.Catagory).OrderBy(x => x.order).AsQueryable();
+
+			var paginatedlist = PaginationList<Blog>.Create(query, 9, page);
+			return View(paginatedlist);
+		}
+
         public IActionResult Details(int id)
         {
           

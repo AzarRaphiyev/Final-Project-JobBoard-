@@ -113,7 +113,7 @@ namespace JobBoard.Controllers
 					return View();
 				}
 				memberRegisterVM.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/users", memberRegisterVM.Imagefile);
-				memberRegisterVM.Image = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/Member/img", memberRegisterVM.Imagefile);
+			
 				memberRegisterVM.Cv = FileManager.SaveFile(webHostEnvironment.WebRootPath, "uploads/Member/cv", memberRegisterVM.CvFile);
 			}
 			else

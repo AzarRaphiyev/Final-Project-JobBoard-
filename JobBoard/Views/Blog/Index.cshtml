@@ -1,4 +1,4 @@
-﻿@model List<Blog>
+﻿@model PaginationList<Blog>
 @{
     ViewData["Title"] = "Index";
 }
@@ -32,20 +32,34 @@
                    
                     
                 </div>
+                <form method="get">
+
                 <div class="row pagination-wrap mt-5">
                     <div class="col-md-12 text-center ">
                         <div class="custom-pagination ml-auto">
-                            <a href="#" class="prev">Prev</a>
+                        @if (Model.HasPrevios)
+                        {
+                            <a asp-action="index" asp-controller="blog" asp-route-page="@(Model.Page-1)" class="prev">Prev</a>
+                        }
                             <div class="d-inline-block">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
+                        @for (int i = 1; i < Model.TotalPage; i++)
+                        {
+
+                                <a asp-action="index" asp-controller="blog" asp-route-page="@i" class=" @(Model.Page==i ? "active" : "" )">@i</a>
+                               
+                           
+                        }
+                        @if (Model.HasNextios)
+                            {
+                                <a asp-action="index" asp-controller="blog" asp-route-page="@(Model.Page+1)" class="prev">Next</a>
+                            }
                             </div>
-                            <a href="#" class="next">Next</a>
                         </div>
                     </div>
                 </div>
+
+
+                </form>
             </div>
         </section>
 

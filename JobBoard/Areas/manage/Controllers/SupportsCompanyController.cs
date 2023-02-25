@@ -2,6 +2,7 @@
 using JobBoard.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JobBoard.Areas.manage.Controllers
 {
@@ -16,10 +17,13 @@ namespace JobBoard.Areas.manage.Controllers
 			this.jobBoardContext = jobBoardContext;
 			this.webHostEnvironment = webHostEnvironment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int page=1)
 		{
-			List<Supports> supports = jobBoardContext.supportsCompany.ToList();
-			return View(supports);
+		
+			var query = jobBoardContext.supportsCompany.AsQueryable();
+
+			var paginatedlist = PaginationList<Supports>.Create(query, 3, page);
+			return View(paginatedlist);
 		}
 		public IActionResult Create()
 		{
