@@ -2,6 +2,7 @@
 using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 using System.Drawing;
 
 namespace JobBoard.Controllers
@@ -16,7 +17,7 @@ namespace JobBoard.Controllers
             this.jobBoardContext = jobBoardContext;
             this.webHostEnvironment = webHostEnvironment;
         }
-
+        #region index
         public IActionResult Index(string? searchBy = null, string? search = null, int? RegionId = null, int? TypeId = null, int page = 1)
         {
 
@@ -67,7 +68,12 @@ namespace JobBoard.Controllers
                 }
                 return View(model);
         }
-        
+
+        #endregion
+
+
+        #region Create
+
         [HttpGet]
         public IActionResult Create()
 
@@ -116,6 +122,9 @@ namespace JobBoard.Controllers
             jobBoardContext.SaveChanges();
             return RedirectToAction("index", "home");
         }
+        #endregion
+
+        #region Update
 
         [HttpGet]
         public IActionResult Update(int id)
@@ -167,6 +176,9 @@ namespace JobBoard.Controllers
             jobBoardContext.SaveChanges();
             return RedirectToAction("index","home");
         }
+        #endregion
+
+        #region Delete
         public IActionResult Delete(int id)
         {
             Job job = jobBoardContext.Jobs.FirstOrDefault(x => x.Id == id);
@@ -176,6 +188,10 @@ namespace JobBoard.Controllers
             jobBoardContext.SaveChanges();
             return Ok(job);
         }
+
+        #endregion
+
+        #region Details
         public IActionResult Details(int id)
         {
             Job DetailJob = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.JobRegion).Include(x => x.Gender).FirstOrDefault(x => x.Id == id);
@@ -187,8 +203,52 @@ namespace JobBoard.Controllers
                 Job = DetailJob,
                 RelationJobs = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.JobRegion).
                 Include(x => x.Gender).Where(x => x.Title == DetailJob.Title).Where(x => x.Id != DetailJob.Id).ToList(),
+                reklams = jobBoardContext.reklams.ToList()
             };
             return View(jobDetailsViewModel);
+        }
+
+        #endregion
+
+        public IActionResult AddtoWhisList(int jonId)
+        {
+
+            List<FavoriViewModel> FavoriItems= new List<FavoriViewModel>();
+            FavoriViewModel favoriItem = new FavoriViewModel
+            {
+                JobId = jonId,
+            };
+            FavoriItems.Add(favoriItem);
+            string favoriItemSTR = JsonConvert.SerializeObject(FavoriItems);
+            HttpContext.Response.Cookies.Append("Favori", favoriItemSTR);
+
+            return Content("Added");
+        }
+        public IActionResult GetWhisList()
+        {
+            List<FavoriViewModel> favoriItems= new List<FavoriViewModel>();
+            string favoriItemStr = HttpContext.Request.Cookies["Favorit"];
+            if (favoriItemStr != null)
+            {
+                favoriItems = JsonConvert.DeserializeObject<List<FavoriViewModel>>(favoriItemStr);
+            }
+
+
+
+
+
+
+
+
+            return Json(favoriItems);
+        }
+        public IActionResult Whisllist() 
+        {
+            List<Job> jobs = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).ToList();
+
+
+
+            return View(jobs);
         }
     }
 }

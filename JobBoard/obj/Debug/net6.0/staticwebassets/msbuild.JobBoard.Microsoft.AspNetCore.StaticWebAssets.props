@@ -31344,6 +31344,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\e7a4d771-acd1-494a-a6f7-8b56e1b55e6bpepsi.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/commentsite/e7a4d771-acd1-494a-a6f7-8b56e1b55e6bpepsi.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\e7a4d771-acd1-494a-a6f7-8b56e1b55e6bpepsi.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\commentsite\side profile.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>JobBoard</SourceId>
@@ -31407,6 +31423,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\a7c50afa-2a7b-4173-a350-1d4a8f8d6ebcFanta_logo_emblem.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\b23718c5-e97b-4f04-806b-f9767856744bFanta_logo_emblem.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JobBoard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JobBoard</BasePath>
+      <RelativePath>uploads/job/b23718c5-e97b-4f04-806b-f9767856744bFanta_logo_emblem.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\b23718c5-e97b-4f04-806b-f9767856744bFanta_logo_emblem.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\job\b8bec3f3-dd3c-44ba-b0ef-b348831ba7e6990f5fbc-2cb8-40d9-89e6-d4602717fb03.png))">
       <SourceType>Package</SourceType>

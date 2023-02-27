@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qOMlCDxneCjkVtIpz6XY2UlkOoy4quZGlSJIQVbXemc=",
+  "Hash": "XhqhHKGglj19OV6+R8w2NPyz6XHNnsOm6Qzwxy+D58c=",
   "Source": "JobBoard",
   "BasePath": "_content/JobBoard",
   "Mode": "Default",
@@ -33337,6 +33337,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\commentsite\\3e699902-b1b9-4a46-ad22-bce09f1a843db829e7f9-bfe8-4459-8a09-f303cf093d72.jpg"
     },
     {
+      "Identity": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\e7a4d771-acd1-494a-a6f7-8b56e1b55e6bpepsi.jpg",
+      "SourceId": "JobBoard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\",
+      "BasePath": "_content/JobBoard",
+      "RelativePath": "uploads/commentsite/e7a4d771-acd1-494a-a6f7-8b56e1b55e6bpepsi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\commentsite\\e7a4d771-acd1-494a-a6f7-8b56e1b55e6bpepsi.jpg"
+    },
+    {
       "Identity": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\commentsite\\side profile.jpg",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
@@ -33403,6 +33420,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\job\\a7c50afa-2a7b-4173-a350-1d4a8f8d6ebcFanta_logo_emblem.png"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\job\\b23718c5-e97b-4f04-806b-f9767856744bFanta_logo_emblem.png",
+      "SourceId": "JobBoard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\",
+      "BasePath": "_content/JobBoard",
+      "RelativePath": "uploads/job/b23718c5-e97b-4f04-806b-f9767856744bFanta_logo_emblem.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\job\\b23718c5-e97b-4f04-806b-f9767856744bFanta_logo_emblem.png"
     },
     {
       "Identity": "C:\\Users\\MSI\\Desktop\\FinalProject\\JobBoard\\wwwroot\\uploads\\job\\b8bec3f3-dd3c-44ba-b0ef-b348831ba7e6990f5fbc-2cb8-40d9-89e6-d4602717fb03.png",
