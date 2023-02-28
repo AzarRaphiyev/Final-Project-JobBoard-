@@ -271,6 +271,9 @@ namespace JobBoard.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("IsViewed")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Message")
                         .IsRequired()
                         .HasMaxLength(3000)
@@ -376,6 +379,9 @@ namespace JobBoard.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<bool>("IsFull")
+                        .HasColumnType("bit");
+
                     b.Property<int>("JobRegionId")
                         .HasColumnType("int");
 
@@ -443,6 +449,52 @@ namespace JobBoard.Migrations
                     b.ToTable("Regions");
                 });
 
+            modelBuilder.Entity("JobBoard.Models.JobSeeker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cv")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("JobId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.HasIndex("JobId");
+
+                    b.ToTable("jobSeekers");
+                });
+
             modelBuilder.Entity("JobBoard.Models.JobType", b =>
                 {
                     b.Property<int>("Id")
@@ -484,7 +536,6 @@ namespace JobBoard.Migrations
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -561,8 +612,8 @@ namespace JobBoard.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(2500)
+                        .HasColumnType("nvarchar(2500)");
 
                     b.Property<int>("Order")
                         .HasColumnType("int");
@@ -1113,6 +1164,21 @@ namespace JobBoard.Migrations
                     b.Navigation("JobType");
                 });
 
+            modelBuilder.Entity("JobBoard.Models.JobSeeker", b =>
+                {
+                    b.HasOne("JobBoard.Models.Company", "Company")
+                        .WithMany("JobSeekers")
+                        .HasForeignKey("CompanyId");
+
+                    b.HasOne("JobBoard.Models.Job", "Job")
+                        .WithMany("jobSeekers")
+                        .HasForeignKey("JobId");
+
+                    b.Navigation("Company");
+
+                    b.Navigation("Job");
+                });
+
             modelBuilder.Entity("JobBoard.Models.PortfolioItem", b =>
                 {
                     b.HasOne("JobBoard.Models.Team", "Team")
@@ -1213,6 +1279,16 @@ namespace JobBoard.Migrations
             modelBuilder.Entity("JobBoard.Models.Blog", b =>
                 {
                     b.Navigation("commentBlogs");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.Company", b =>
+                {
+                    b.Navigation("JobSeekers");
+                });
+
+            modelBuilder.Entity("JobBoard.Models.Job", b =>
+                {
+                    b.Navigation("jobSeekers");
                 });
 
             modelBuilder.Entity("JobBoard.Models.PortfolioItem", b =>

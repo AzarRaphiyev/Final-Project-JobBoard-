@@ -3,5 +3,5 @@
     public class FavoriViewModel
     {
         public int JobId { get; set; }
-    }
+    }   
 }

@@ -19,6 +19,7 @@
 	<link asp-append-version="true" rel="stylesheet" href="~/assets/fonts/line-icons/style.css">
 	<link asp-append-version="true" rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
 	<link asp-append-version="true" rel="stylesheet" href="~/assets/css/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.css" integrity="sha512-NvuRGlPf6cHpxQqBGnPe7fPoACpyrjhlSNeXVUY7BZAj1nNhuNpRBq3osC4yr2vswUEuHq2HtCsY2vfLNCndYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link asp-append-version="true"  rel="stylesheet" href="~/assets/css/style.css">
 	<script nonce="50b99e42-c988-44e7-9ab1-8f7c33314d53">(function (w, d) { !function (f, g, h, i) { f[h] = f[h] || {}; f[h].executed = []; f.zaraz = { deferred: [], listeners: [] }; f.zaraz.q = []; f.zaraz._f = function (j) { return function () { var k = Array.prototype.slice.call(arguments); f.zaraz.q.push({ m: j, a: k }) } }; for (const l of ["track", "set", "debug"]) f.zaraz[l] = f.zaraz._f(l); f.zaraz.init = () => { var m = g.getElementsByTagName(i)[0], n = g.createElement(i), o = g.getElementsByTagName("title")[0]; o && (f[h].t = g.getElementsByTagName("title")[0].text); f[h].x = Math.random(); f[h].w = f.screen.width; f[h].h = f.screen.height; f[h].j = f.innerHeight; f[h].e = f.innerWidth; f[h].l = f.location.href; f[h].r = g.referrer; f[h].k = f.screen.colorDepth; f[h].n = g.characterSet; f[h].o = (new Date).getTimezoneOffset(); if (f.dataLayer) for (const s of Object.entries(Object.entries(dataLayer).reduce(((t, u) => ({ ...t[1], ...u[1] }))))) zaraz.set(s[0], s[1], { scope: "page" }); f[h].q = []; for (; f.zaraz.q.length;) { const v = f.zaraz.q.shift(); f[h].q.push(v) } n.defer = !0; for (const w of [localStorage, sessionStorage]) Object.keys(w || {}).filter((y => y.startsWith("_zaraz_"))).forEach((x => { try { f[h]["z_" + x.slice(7)] = JSON.parse(w.getItem(x)) } catch { f[h]["z_" + x.slice(7)] = w.getItem(x) } })); n.referrerPolicy = "origin"; n.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(f[h]))); m.parentNode.insertBefore(n, m) };["complete", "interactive"].includes(g.readyState) ? zaraz.init() : f.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
@@ -47,62 +48,7 @@
 
 
 
-		<footer class="site-footer">
-			<a href="#top" class="smoothscroll scroll-top">
-				<span class="icon-keyboard_arrow_up"></span>
-			</a>
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-6 col-md-3 mb-4 mb-md-0">
-						<h3>Search Trending</h3>
-						<ul class="list-unstyled">
-							<li><a href="#">Web Design</a></li>
-							<li><a href="#">Graphic Design</a></li>
-							<li><a href="#">Web Developers</a></li>
-							<li><a href="#">Python</a></li>
-							<li><a href="#">HTML5</a></li>
-							<li><a href="#">CSS3</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-md-3 mb-4 mb-md-0">
-						<h3>Company</h3>
-						<ul class="list-unstyled">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Career</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Resources</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-md-3 mb-4 mb-md-0">
-						<h3>Support</h3>
-						<ul class="list-unstyled">
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Privacy</a></li>
-							<li><a href="#">Terms of Service</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-md-3 mb-4 mb-md-0">
-						<h3>Contact Us</h3>
-						<div class="footer-social">
-							<a href="#"><span class="icon-facebook"></span></a>
-							<a href="#"><span class="icon-twitter"></span></a>
-							<a href="#"><span class="icon-instagram"></span></a>
-							<a href="#"><span class="icon-linkedin"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="row text-center">
-					<div class="col-12">
-						<p class="copyright">
-							<small>
-
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-							</small>
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
+		@await Component.InvokeAsync("Footer");
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
@@ -118,6 +64,7 @@
 	<script asp-append-version="true" src="~/assets/js/owl.carousel.min.js"></script>
 	<script asp-append-version="true" src="~/assets/js/bootstrap-select.min.js"></script>
 	<script asp-append-version="true" src="~/assets/js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.js" integrity="sha512-jSNGQoIZ0qago6DK45skZbDI1JC8bmANSwItgDnMXiAnJm0Lq6QB4yXY8QPKqS68iR3ngZi0pM5+wZvg1kCCKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script asp-append-version="true" src="~/manage/js/sb-admin-2.js"></script>
 

@@ -79,6 +79,10 @@ namespace JobBoard.Controllers
 			jobBoardContext.SaveChanges();
 			return RedirectToAction("Index","Home");
 		}
+
+
+
+
 		public IActionResult Details(int id)
 		{
 			Company company=jobBoardContext.companies.FirstOrDefault(x => x.Id==id);

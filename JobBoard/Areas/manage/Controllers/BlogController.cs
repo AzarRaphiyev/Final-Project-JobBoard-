@@ -66,8 +66,11 @@ namespace JobBoard.Areas.manage.Controllers
 			ViewBag.authours = jobBoardContext.authours.ToList();
 			ViewBag.catagory = jobBoardContext.catagories.ToList();
 			Blog blog= jobBoardContext.blogs.FirstOrDefault(x=>x.Id==ID);
-
-			return View(blog);
+            if (blog is null)
+            {
+                return View("error");
+            }
+            return View(blog);
 		}
 		[HttpPost]
 		public IActionResult Update(Blog blog)

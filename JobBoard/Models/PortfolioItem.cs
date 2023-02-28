@@ -10,7 +10,7 @@
 		[StringLength(maximumLength: 80, ErrorMessage = "Can be a maximum of 80 simvols")]
 		public string Title { get; set; }
 		[Required]
-		[StringLength(maximumLength: 250, ErrorMessage = "Can be a maximum of 250 simvols")]
+		[StringLength(maximumLength: 2500, ErrorMessage = "Can be a maximum of 2500 simvols")]
 		public string Description { get; set; }
 		[Required]
 		
@@ -28,7 +28,7 @@
 		public List<IFormFile>? ImageFiles { get; set; }
 
 		[NotMapped]
-		public IFormFile PosterImageFile { get; set; }
+		public IFormFile? PosterImageFile { get; set; }
 		public Team? Team { get; set; }
 		public PoerfolioCatagory? poerfolioCatagories { get; set; }
 		[NotMapped]

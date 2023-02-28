@@ -1,6 +1,7 @@
 ﻿
 
 using JobBoard.Models;
+using Newtonsoft.Json;
 using Org.BouncyCastle.Utilities.IO;
 using System.Drawing;
 
@@ -9,10 +10,12 @@ namespace JobBoard.Controllers
 	public class HomeController : Controller
 	{
 		private readonly JobBoardContext jobBoardContext;
+		private readonly UserManager<AppUser> userManager;
 
-		public HomeController(JobBoardContext jobBoardContext)
+		public HomeController(JobBoardContext jobBoardContext,UserManager<AppUser> userManager)
 		{
 			this.jobBoardContext = jobBoardContext;
+			this.userManager = userManager;
 		}
 		public IActionResult Index(string? searchBy = null, string? search = null, int? regionId = 0, int? typeid = 0,int page=1)
 		
@@ -20,12 +23,31 @@ namespace JobBoard.Controllers
 			ViewBag.Region = jobBoardContext.Regions.ToList();
 			ViewBag.Type = jobBoardContext.jobTypes.ToList();
 
-			var model = new IndexViewModel();
+            
+            var model = new IndexViewModel();
+
+
+            if (search is null || regionId ==0 || typeid==0) 
+            {
+                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).Where(x=>x.IsFull==false).AsQueryable();
+                model = new IndexViewModel
+                {
+                    jobs = query.ToList(),
+                    paginatedlist = PaginationList<Job>.Create(query, 7, page),
+                    Supports = jobBoardContext.supportsCompany.OrderByDescending(x => x.Id).Take(8).ToList(),
+                    reklams = jobBoardContext.reklams.OrderBy(x => x.Order).ToList(),
+                    Companies = jobBoardContext.Users.Where(x => x.Role == "Company").Where(x => x.Enabled == true).ToList(),
+                    Members = jobBoardContext.Users.Where(x => x.Role == "Member").ToList(),
+                    teams = jobBoardContext.JonTeamMembers.ToList(),
+                    fullcobs = jobBoardContext.Jobs.ToList()
+                };
+            }
+
 
 
 			if (searchBy == "Name")
 			{
-                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).AsQueryable();
+                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).Where(x => x.IsFull == false).AsQueryable();
                 if (search != null)
                 {
 					model.jobs=query.Where(s => s.Title.Contains(search)).ToList();
@@ -68,10 +90,10 @@ namespace JobBoard.Controllers
 
 			else
 			{
-                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).AsQueryable();
+                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).Where(x => x.IsFull == false).OrderByDescending(x => x.Id).AsQueryable();
                 model = new IndexViewModel
-				{
-				    jobs=query.ToList(),
+                {
+                    jobs = query.ToList(),
 					paginatedlist= PaginationList<Job>.Create(query, 7, page), 
 					Supports = jobBoardContext.supportsCompany.OrderByDescending(x => x.Id).Take(8).ToList(),
 					reklams = jobBoardContext.reklams.OrderBy(x=>x.Order).ToList(),
@@ -83,7 +105,60 @@ namespace JobBoard.Controllers
 			}
 			return View(model);
 		}
-	
 
-	}
+
+
+
+
+
+
+
+        //public IActionResult SetSession(string key, string value)
+        //{
+        //    HttpContext.Session.SetString(key, value);
+        //    return Content("Ok");
+        //}
+        //public IActionResult GetSession(string key)
+        //{
+        //    string value = HttpContext.Session.GetString(key);
+        //    return Content(value);
+        //}
+
+
+
+
+        //public IActionResult SetCookies(string key, string value)
+        //{
+        //    HttpContext.Response.Cookies.Append(key, value, new CookieOptions
+        //    {
+        //        MaxAge = TimeSpan.FromDays(7)
+        //    });
+        //    return Content("Ok");
+        //}
+
+        //public IActionResult GetCookies(string key)
+        //{
+        //    return Content(HttpContext.Request.Cookies[key]);
+        //}
+
+
+
+        public IActionResult Wishlist()
+        {
+
+			List<FavoriViewModel> favoriItems = new List<FavoriViewModel>();
+			List<Job> jobList = new List<Job>();
+			string FavoritItemStr = HttpContext.Request.Cookies["Favorit"];
+			if (FavoritItemStr != null)
+			{
+				favoriItems = JsonConvert.DeserializeObject<List<FavoriViewModel>>(FavoritItemStr);
+			}
+			foreach (var item in favoriItems)
+			{
+				var findedItem = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).FirstOrDefault(x => x.Id == item.JobId);
+				jobList.Add(findedItem);
+			}
+			return View(jobList);
+        }
+    }
 }

@@ -16,6 +16,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 	opt.Password.RequireLowercase = true;
 	opt.Password.RequireUppercase = true;
 	opt.User.RequireUniqueEmail = false;
+
+	//opt.SignIn.RequireConfirmedEmail= true;
 }).AddEntityFrameworkStores<JobBoardContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<LayoutServices>();
 builder.Services.AddScoped<AdminLayoutService>();
@@ -24,15 +26,18 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 
 builder.Services.AddTransient<IMailService, MailService>();
 
-
+builder.Services.AddSession(opt =>
+{
+    opt.IdleTimeout = TimeSpan.FromSeconds(5);
+});
+builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
 
 
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
-
+app.UseSession();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

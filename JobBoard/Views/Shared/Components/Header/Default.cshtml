@@ -12,6 +12,15 @@
 					<li class="has-children">
 						<a asp-action="index" asp-controller="job">Job Listings</a>
 						<ul class="dropdown">
+							@if (User.Identity.IsAuthenticated)
+							{
+								@if (User.IsInRole("Company"))
+								{
+									<li>
+									<a asp-action= "Index" asp-controller="Applicants" asp-route-username="@User.Identity.Name" class="text-danger"> Application List </a>
+									</li>
+								}
+							}
 							<li><a asp-action="index" asp-controller="company">Company List</a></li>
 						</ul>
 					</li>
@@ -42,17 +51,20 @@
 							<a asp-action="Edit" asp-controller="Company" asp-route-username="@User.Identity.Name" class="btn btn-primary ">  <i class="bi bi-building-fill-gear"></i> </a>
 							<a asp-action= "CompanyProfil" asp-controller="MyProfil" asp-route-username="@User.Identity.Name" class="btn btn-primary "> <i class="bi bi-person-circle"></i> </a>
 							<a asp-action="logout" asp-controller="account" class="btn btn-primary "> <i class="bi bi-box-arrow-left"></i> </a>
+							<a asp-action="Wishlist" asp-controller="home" class="btn btn-warning "> <i class="bi bi-star-fill"></i> </a>
 						}
 						if (User.IsInRole("SuperAdmin")||User.IsInRole("Admin"))
 						{
 							<a asp-action="index" asp-controller="dashboard" asp-area="manage" class="btn btn-outline-primary ">Go Admin Panel</a>
 							<a asp-action="logout" asp-controller="account" class="btn btn-primary" ><i class="bi bi-box-arrow-left"></i></a>
+							<a asp-action="Wishlist" asp-controller="home" class="btn btn-warning "> <i class="bi bi-star-fill"></i> </a>
 						}
 						if (User.IsInRole("Member"))
 						{
 							<a asp-action="MemberProfil" asp-controller="MyProfil" asp-route-username="@User.Identity.Name" class="btn btn-primary "> <i class="bi bi-person-circle"></i> </a>
 							<a asp-action="Edit" asp-controller="Member" asp-route-username="@User.Identity.Name" class="btn btn-outline-primary "><i class="bi bi-pencil-square"></i></a>
 							<a asp-action="logout" asp-controller="account" class="btn btn-primary "><i class="bi bi-box-arrow-left"></i></a>
+							<a asp-action="Wishlist" asp-controller="home" class="btn btn-warning "> <i class="bi bi-star-fill"></i> </a>
 						}
 					}
 					else

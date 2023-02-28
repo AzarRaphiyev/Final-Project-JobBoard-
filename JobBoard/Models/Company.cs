@@ -39,7 +39,10 @@
 		public string? FecebookUrl { get; set; }
 		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? TwitterUrl { get; set; }
+
 		[StringLength(maximumLength: 100, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? LinkedinUrl { get; set; }
+
+        public List<JobSeeker>? JobSeekers { get; set; }
 	}
 }

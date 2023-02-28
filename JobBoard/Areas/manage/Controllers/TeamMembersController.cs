@@ -1,4 +1,5 @@
 ﻿using JobBoard.Helpers;
+using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -55,6 +56,11 @@ namespace JobBoard.Areas.manage.Controllers
         {
             ViewBag.Position = jobBoardContext.positions.ToList();
             Team teamMember = jobBoardContext.JonTeamMembers.Include(x => x.position).FirstOrDefault(x => x.Id == id);
+            if (teamMember is null)
+            {
+                return View("error");
+            }
+
             return View(teamMember);
         }
         [HttpPost]

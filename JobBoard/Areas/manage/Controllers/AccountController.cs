@@ -93,6 +93,9 @@ namespace JobBoard.Areas.manage.Controllers
         }
 
         [Authorize(Roles = "SuperAdmin")]
+
+
+
         public IActionResult Register()
         {
             return View();
@@ -135,8 +138,6 @@ namespace JobBoard.Areas.manage.Controllers
                     return View();
                 }
             }
-            await userManager.AddToRoleAsync(member, "Admin");
-
             return RedirectToAction("index","dashboard");
         }
         public async Task<IActionResult> LogOut()

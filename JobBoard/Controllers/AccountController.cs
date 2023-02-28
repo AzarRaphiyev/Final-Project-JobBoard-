@@ -255,9 +255,12 @@ namespace JobBoard.Controllers
 
 		public async Task<IActionResult> LogOut()
 		{
+
 			await signInManager.SignOutAsync();
 			return RedirectToAction(nameof(Login));
 		}
+
+
 
 		#region ForgotPassword
 		public IActionResult ForgotPassword()

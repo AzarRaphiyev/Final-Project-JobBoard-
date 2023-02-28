@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JobBoard.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JobBoard.Areas.manage.Controllers
@@ -39,7 +40,11 @@ namespace JobBoard.Areas.manage.Controllers
 		public IActionResult Update(int id)
 		{
 			PoerfolioCatagory catagory = jobBoardContext.poerfolioCatagories.FirstOrDefault(x => x.Id == id);
-			return View(catagory);
+            if (catagory is null)
+            {
+                return View("error");
+            }
+            return View(catagory);
 		}
 		[HttpPost]
 		public IActionResult Update(PoerfolioCatagory catagory)

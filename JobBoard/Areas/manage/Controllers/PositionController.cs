@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JobBoard.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JobBoard.Areas.manage.Controllers
@@ -38,7 +39,11 @@ namespace JobBoard.Areas.manage.Controllers
 		public IActionResult Update(int id)
 		{
 			Position position= jobBoardContext.positions.FirstOrDefault(x=>x.id==id);
-			return View(position);
+            if (position is null)
+            {
+                return View("error");
+            }
+            return View(position);
 		}
 		[HttpPost]
 		public IActionResult Update(Position position)

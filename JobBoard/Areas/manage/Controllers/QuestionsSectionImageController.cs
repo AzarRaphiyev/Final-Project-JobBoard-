@@ -56,7 +56,11 @@ namespace JobBoard.Areas.manage.Controllers
 		public IActionResult Update(int id)
 		{
 			QuestionsSectionImage questionsSectionImage=jobBoardContext.questionsSectionImages.FirstOrDefault(x => x.Id == id);
-			return View(questionsSectionImage);
+            if (questionsSectionImage is null)
+            {
+                return View("error");
+            }
+            return View(questionsSectionImage);
 		}
 		[HttpPost]
 		public IActionResult Update(QuestionsSectionImage questionsSectionImage)

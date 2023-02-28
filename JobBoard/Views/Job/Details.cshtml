@@ -52,17 +52,23 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4">
+                    @if (User.Identity.IsAuthenticated)
+            {
+                 <div class="col-lg-4">
                         <div class="row">
                             <div class="col-6">
-                                <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
+                        <a id="FavoriBtn" asp-action="AddtoWhisList" asp-controller="job" asp-route-id="@Model.Job.Id" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
                             </div>
-                            <div class="col-6">
-                                <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                            @if (User.IsInRole("Member"))
+                        {
+                             <div class="col-6">
+                                <a id="applybtn" asp-action="apply" asp-controller="jobseeker" asp-route-jobId="@Model.Job.Id" class=" btn btn-block btn-primary btn-md">Apply Now</a>
                             </div>
+                        }
                         </div>
                     </div>
+            }
+                   
 
                 </div>
                 <div class="row">
@@ -84,29 +90,21 @@
                             <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-turned_in mr-3"></span>Other Benifits</h3>
                             <p>@Model.Job.OutherBenifits</p>
                         </div>
-                        <div class="row mb-5">
-
-                            <div class="col-6">
-                                <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
-                            </div>
-
-
-                        </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="bg-light p-3 border rounded mb-4">
                             <h3 class="text-primary  mt-3 h5 pl-3 mb-3 ">Job Summary</h3>
                             <ul class="list-unstyled pl-3 mb-0">
                                 <li class="mb-2"><strong class="text-black">Published on:</strong> @Model.Job.PublishedOn?.ToString("MMMM dd, yyyy")</li>
+                                <li class="mb-2"><strong class="text-black">Region:</strong> @Model.Job.JobRegion.Region</li>
                                 <li class="mb-2"><strong class="text-black">Vacancy:</strong> @Model.Job.Vacancy</li>
                                 <li class="mb-2"><strong class="text-black">Employment Status:</strong>@Model.Job.JobType.Type</li>
                                 <li class="mb-2"><strong class="text-black">Experience:</strong> @Model.Job.Experince year(s)</li>
                                 <li class="mb-2"><strong class="text-black">Job Location:</strong> @Model.Job.Company.Location</li>
                                 <li class="mb-2"><strong class="text-black">Salary:</strong> $@Model.Job.MinSalary - $@Model.Job.MaxSalary</li>  
                                 <li class="mb-2"><strong class="text-black">Gender:</strong> @Model.Job.Gender.GenderType</li>
+                                <li class="mb-2"><strong class="text-black">Aviable:</strong> @Model.Job.IsFull</li>
+                                <li class="mb-2"><strong class="text-black">Vacancy:</strong> @Model.Job.Vacancy</li>
                                 <li class="mb-2"><strong class="text-black">Application Deadline:</strong> @Model.Job.ApplicationDeadline.ToString("MMMM dd,yyyy")</li>
                             </ul>
                         </div>
@@ -193,3 +191,21 @@
 
     </div>
 </section>
+
+
+<script>
+    
+    let applybtn = document.getElementById("applybtn");
+applybtn.addEventListener("click", function (e) {
+    e.preventDefault;
+        alert("You Have Applied");
+})
+
+
+    let FavoriBtn = document.getElementById("FavoriBtn");
+    FavoriBtn.addEventListener("click", function (e) {
+        e.preventDefault;
+        alert("You can see favorites");
+    })
+
+</script>

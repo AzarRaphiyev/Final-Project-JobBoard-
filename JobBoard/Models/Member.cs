@@ -21,7 +21,7 @@
 
 
 
-		[Required]
+	
 		[StringLength(maximumLength: 100, MinimumLength = 8, ErrorMessage = "Maksimum 100 simvol ola biler")]
 		public string? Image { get; set; }
 

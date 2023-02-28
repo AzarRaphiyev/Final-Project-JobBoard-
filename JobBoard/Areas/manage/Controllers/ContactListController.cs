@@ -24,8 +24,11 @@ namespace JobBoard.Areas.manage.Controllers
         {
             Contact contact = jobBoardContext.Contacts.FirstOrDefault(x => x.Id == id);
             if (contact == null) return View("error");
+            contact.IsViewed= true;
+            jobBoardContext.SaveChanges();
             return View(contact);
         }
+
 
 		
 		public IActionResult Delete(int id)

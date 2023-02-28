@@ -32,5 +32,6 @@ namespace JobBoard.Database
 		public DbSet<Job> Jobs { get; set; }
 		public DbSet<Supports> supportsCompany { get; set; }
 		public DbSet<Reklam> reklams { get; set; }
+		public DbSet<JobSeeker> jobSeekers { get; set; }
 	}
 }

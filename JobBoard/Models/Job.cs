@@ -50,10 +50,13 @@
 		public string? Image { get; set; }
 		[NotMapped]
 		public IFormFile? ImageFile { get; set; }
+		public bool IsFull { get; set; }= false;
 
 		public Company? Company { get; set; }
 		public JobType? JobType { get; set; }
 		public JobRegion? JobRegion { get; set; }
 		public Gender? Gender { get; set; }
+
+		public List<JobSeeker>? jobSeekers { get; set; }
 	}
 }

@@ -26,6 +26,17 @@ namespace JobBoard.Controllers
 
             var model = new JobsViewModel();
 
+            if (search is null || RegionId == 0 || TypeId == 0)
+            {
+                var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).AsQueryable();
+                model = new JobsViewModel
+                {
+                    jobs = query.ToList(),
+                    paginatedlist = PaginationList<Job>.Create(query, 7, page)
+                };
+            }
+
+
             if (searchBy == "Name")
             {
                 var query = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).AsQueryable();
@@ -185,8 +196,13 @@ namespace JobBoard.Controllers
             if (job == null) { return View("Error"); }
             FileManager.DeleteFile(webHostEnvironment.WebRootPath, "uploads/job", job.Image);
             jobBoardContext.Jobs.Remove(job);
+            List<JobSeeker> jobSeekers =jobBoardContext.jobSeekers.Where(x=>x.JobId==id).ToList();
+            foreach (var item in jobSeekers)
+            {
+                jobBoardContext.jobSeekers.Remove(item);
+            }
             jobBoardContext.SaveChanges();
-            return Ok(job);
+            return Ok();
         }
 
         #endregion
@@ -210,45 +226,68 @@ namespace JobBoard.Controllers
 
         #endregion
 
-        public IActionResult AddtoWhisList(int jonId)
+        #region Whislist
+ public async Task<IActionResult>  AddtoWhisList(int id)
         {
+
+            var job =jobBoardContext.Jobs.Include(x=>x.Company).Include(x=>x.JobType).Include(x=>x.JobRegion).FirstOrDefault(x=>x.Id== id);
+            if (job== null)
+            {
+                return View("error");
+            }
 
             List<FavoriViewModel> FavoriItems= new List<FavoriViewModel>();
-            FavoriViewModel favoriItem = new FavoriViewModel
+            FavoriViewModel favoriItem = null;
+            string FavoritItemStr = HttpContext.Request.Cookies["Favorit"];
+            if (FavoritItemStr!=null)
             {
-                JobId = jonId,
-            };
-            FavoriItems.Add(favoriItem);
-            string favoriItemSTR = JsonConvert.SerializeObject(FavoriItems);
-            HttpContext.Response.Cookies.Append("Favori", favoriItemSTR);
+                FavoriItems = JsonConvert.DeserializeObject<List<FavoriViewModel>>(FavoritItemStr);
+                favoriItem=FavoriItems.FirstOrDefault(x=>x.JobId==id);
+                if (favoriItem != null) FavoriItems.Remove(favoriItem);
+                else
+                {
+                    favoriItem = new FavoriViewModel
+                    {
+                        JobId = id,
+                    };
+                    FavoriItems.Add(favoriItem) ;
+                }
+            }
+            else
+            {
+                favoriItem=new FavoriViewModel
+                {
+                JobId = id,
+                };
+            }
+            FavoritItemStr = JsonConvert.SerializeObject(FavoriItems);
 
-            return Content("Added");
+           
+            HttpContext.Response.Cookies.Append("Favorit", FavoritItemStr);
+
+            return RedirectToAction("Wishlist", "home");
         }
+
+
+
+
+
+
         public IActionResult GetWhisList()
         {
-            List<FavoriViewModel> favoriItems= new List<FavoriViewModel>();
-            string favoriItemStr = HttpContext.Request.Cookies["Favorit"];
-            if (favoriItemStr != null)
+           List<FavoriViewModel> favoriItems= new List<FavoriViewModel>();
+           string favoriItemStr = HttpContext.Request.Cookies["Favorit"];
+            if (favoriItemStr!=null)
             {
                 favoriItems = JsonConvert.DeserializeObject<List<FavoriViewModel>>(favoriItemStr);
             }
 
-
-
-
-
-
-
-
             return Json(favoriItems);
         }
-        public IActionResult Whisllist() 
-        {
-            List<Job> jobs = jobBoardContext.Jobs.Include(x => x.Company).Include(x => x.JobType).Include(x => x.Gender).Include(x => x.JobRegion).ToList();
+        #endregion
+       
 
-
-
-            return View(jobs);
-        }
+        
+ 
     }
 }

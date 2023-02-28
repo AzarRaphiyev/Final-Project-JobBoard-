@@ -15,6 +15,9 @@ namespace JobBoard.Controllers
 		{
 			return View();
 		}
+
+
+
 		public IActionResult CompanyProfil(string username)
 		{
 			Company company = jobBoardContext.companies.FirstOrDefault(c => c.UserName == username);
@@ -26,6 +29,11 @@ namespace JobBoard.Controllers
 
 			return View(companyViewModel);
 		}
+
+
+
+
+
 		public IActionResult MemberProfil(string username) 
 		{
 		AppUser appUser=jobBoardContext.Users.FirstOrDefault(x=>x.UserName == username);	

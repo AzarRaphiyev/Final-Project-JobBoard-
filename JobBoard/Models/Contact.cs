@@ -25,5 +25,6 @@
 		[StringLength(maximumLength: 50, ErrorMessage = "Can be a maximum of 50 characters")]
 		[DataType(DataType.DateTime)]
 		public DateTime? Data { get; set; }
+		public bool IsViewed { get; set; }=false;
 	}
 }

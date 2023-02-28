@@ -41,6 +41,15 @@ btn.forEach(btn => btn.addEventListener("click", function (e) {
     })
 }))
 
+
+
+
+
+
+
+
+
+
 $(function () {
 
     $('#dropzone').on('dragover', function () {

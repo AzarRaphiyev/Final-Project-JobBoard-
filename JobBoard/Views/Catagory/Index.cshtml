@@ -11,8 +11,7 @@
             <div class="col-md-7">
                 <h1 class="text-white font-weight-bold">Catagory</h1>
                 <div class="custom-breadcrumbs">
-                    <a asp-action="index" asp-controller="home">Home</a> <span class="mx-2 slash">/</span>
-                    <span class="text-white">
+                    <a asp-action="index" asp-controller="home">Home</a> 
                         @for (int i = 1; i < Model.Count; i++)
                         {
                         <strong>@Model[i].Catagory.CatagoryName</strong>

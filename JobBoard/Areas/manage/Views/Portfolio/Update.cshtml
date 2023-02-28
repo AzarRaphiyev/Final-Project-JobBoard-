@@ -91,6 +91,7 @@
 				<span asp-validation-for="ImageFiles" class="text-danger"></span>
 
 				<div class="d-flex " style="flex-wrap:wrap;">
+
 					@foreach (var item in Model.portfolioItemImages)
 					{
 						if (item.IsPoster == null)
@@ -102,6 +103,7 @@
 							</div>
 						}
 					}
+
 				</div>
 
 			</div>

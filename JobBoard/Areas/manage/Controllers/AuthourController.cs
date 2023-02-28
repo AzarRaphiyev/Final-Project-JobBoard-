@@ -50,6 +50,10 @@ namespace JobBoard.Areas.manage.Controllers
 		public IActionResult Update(int id)
 		{
 			Authour authour = jobBoardContext.authours.FirstOrDefault(x => x.Id == id);
+			if (authour is null)
+			{
+				return View("error");
+			}
 			return View(authour);
 		}
 		[HttpPost]

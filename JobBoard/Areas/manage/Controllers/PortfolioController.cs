@@ -199,6 +199,7 @@ namespace JobBoard.Areas.manage.Controllers
 					jobBoardContext.portfolioItemImages.Remove(image);
 				}
 			}
+
 			else
 			{
 				List<PortfolioItemImages> DeletedImage = ExtItem.portfolioItemImages.Where(x => !portfolioItem.PortfolioImageIds.Contains(x.Id)).ToList();

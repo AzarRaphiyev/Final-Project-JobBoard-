@@ -2,6 +2,8 @@
 {
 	public class HeaderViewComponent:ViewComponent
 	{
+
+
 		private readonly JobBoardContext jobBoardContext;
 
 		public HeaderViewComponent(JobBoardContext jobBoardContext)

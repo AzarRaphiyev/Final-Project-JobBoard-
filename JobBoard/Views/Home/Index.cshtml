@@ -173,6 +173,8 @@
 					<div class="row pagination-wrap mt-5">
 						<div class="col-md-12 text-center ">
 							<div class="custom-pagination ml-auto">
+
+
 								@if (Model.paginatedlist.HasPrevios)
 								{
 									<a asp-action="index" asp-controller="Home" asp-route-page="@(Model.paginatedlist.Page-1)" class="prev">Prev</a>

@@ -51,7 +51,11 @@ namespace JobBoard.Areas.manage.Controllers
 			return RedirectToAction("Index");
 		}
         public IActionResult Update(int id) {
-            MiniInfoBar miniInfoBar=jobBoardContext.miniInfoBars.FirstOrDefault(x=>x.Id==id);        
+            MiniInfoBar miniInfoBar=jobBoardContext.miniInfoBars.FirstOrDefault(x=>x.Id==id);
+            if (miniInfoBar is null)
+            {
+                return View("error");
+            }
             return View(miniInfoBar);
         }
         [HttpPost]

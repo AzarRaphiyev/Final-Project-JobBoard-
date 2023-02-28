@@ -26,7 +26,7 @@
         }
         public List<Contact> GetContacts()
         {
-            List<Contact> contacts=jobBoardContext.Contacts.OrderByDescending(x => x.Id).Take(3).ToList();
+            List<Contact> contacts=jobBoardContext.Contacts.Where(x=>x.IsViewed==false).OrderByDescending(x => x.Id).Take(3).ToList();
             return contacts;
         }
 
